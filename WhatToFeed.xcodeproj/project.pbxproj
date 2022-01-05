@@ -17,6 +17,8 @@
 		C30C95482785CAA000F6DCA2 /* StatisticsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30C95472785CAA000F6DCA2 /* StatisticsViewController.storyboard */; };
 		C30C954A2785D1D000F6DCA2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C95492785D1D000F6DCA2 /* UIViewController+Extension.swift */; };
 		C30C954C2785D8E700F6DCA2 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C954B2785D8E700F6DCA2 /* NSObject+Extension.swift */; };
+		C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */; };
+		C30C9551278601F800F6DCA2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C9550278601F800F6DCA2 /* Colors.swift */; };
 		C3AD148F2784372900CD090D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD148E2784372900CD090D /* AppDelegate.swift */; };
 		C3AD14912784372900CD090D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14902784372900CD090D /* SceneDelegate.swift */; };
 		C3AD14932784372900CD090D /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14922784372900CD090D /* GreetingViewController.swift */; };
@@ -57,6 +59,8 @@
 		C30C95472785CAA000F6DCA2 /* StatisticsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatisticsViewController.storyboard; sourceTree = "<group>"; };
 		C30C95492785D1D000F6DCA2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C30C954B2785D8E700F6DCA2 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
+		C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		C30C9550278601F800F6DCA2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C3AD148B2784372900CD090D /* WhatToFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AD148E2784372900CD090D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3AD14902784372900CD090D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +125,7 @@
 			children = (
 				C30C95492785D1D000F6DCA2 /* UIViewController+Extension.swift */,
 				C30C954B2785D8E700F6DCA2 /* NSObject+Extension.swift */,
+				C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -141,6 +146,14 @@
 				C30C95472785CAA000F6DCA2 /* StatisticsViewController.storyboard */,
 			);
 			path = statistics;
+			sourceTree = "<group>";
+		};
+		C30C954F278601EA00F6DCA2 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				C30C9550278601F800F6DCA2 /* Colors.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		C3AD14822784372900CD090D = {
@@ -170,6 +183,7 @@
 				C3AD14902784372900CD090D /* SceneDelegate.swift */,
 				C3AD14BF278441DF00CD090D /* LaunchingScreen */,
 				C3AD14C02784475700CD090D /* View Controllers */,
+				C30C954F278601EA00F6DCA2 /* Constants */,
 				C30C953A2785C57C00F6DCA2 /* Extensions */,
 				C3AD14972784372E00CD090D /* Assets.xcassets */,
 				C3AD14BE2784418600CD090D /* Supporting Files */,
@@ -360,8 +374,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C30C954A2785D1D000F6DCA2 /* UIViewController+Extension.swift in Sources */,
+				C30C9551278601F800F6DCA2 /* Colors.swift in Sources */,
 				C3AD14932784372900CD090D /* GreetingViewController.swift in Sources */,
 				C30C95372785C45F00F6DCA2 /* CurretProductsListViewController.swift in Sources */,
+				C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */,
 				C30C953227858C8900F6DCA2 /* DailyMealViewController.swift in Sources */,
 				C30C95442785C98700F6DCA2 /* StatisticsViewController.swift in Sources */,
 				C30C954C2785D8E700F6DCA2 /* NSObject+Extension.swift in Sources */,

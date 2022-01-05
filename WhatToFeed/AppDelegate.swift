@@ -13,17 +13,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let greetingViewController = UIStoryboard(name: "GreetingViewController", bundle: nil).instantiateInitialViewController() as! GreetingViewController
-        self.window?.rootViewController = greetingViewController
-        self.window?.makeKeyAndVisible()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: { [weak self] in
-            guard let self = self else { return }
+//        let greetingViewController = UIStoryboard(name: "GreetingViewController", bundle: nil).instantiateInitialViewController() as! GreetingViewController
+//        self.window?.rootViewController = greetingViewController
+//        self.window?.makeKeyAndVisible()
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: { [weak self] in
+//            guard let self = self else { return }
             let tabBarController = TabBarController()
             self.window?.rootViewController = tabBarController
             self.window?.makeKeyAndVisible()
-        })
+//        })
         return true
     }
 

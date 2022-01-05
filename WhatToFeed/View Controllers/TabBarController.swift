@@ -7,18 +7,23 @@
 
 import UIKit
 
+// base TabBarConroller from which user can navigate to different controllers
+
 class TabBarController: UITabBarController {
 
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.delegate = self
         load()
-        // Do any additional setup after loading the view.
     }
     
+    // MARK: - load
     private func load(){
         setUpTabBarControllers()
         self.selectedIndex = 0
+        self.tabBar.backgroundColor = .tabBarLightGray
+        self.tabBar.layer.cornerRadius = 15
     }
     
     private func setUpTabBarControllers() {
@@ -44,7 +49,17 @@ class TabBarController: UITabBarController {
         navigationController.tabBarItem = tabBarItem
         return navigationController
     }
-    
+}
+
+// MARK: - UITabBarControllerDelegate
+extension TabBarController: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        // do something
+    }
+}
+
+// MARK: - TabBarItemType
+extension TabBarController {
     enum TabBarItemType: Int {
         case DailyMeal
         case CurretProductsList
@@ -69,11 +84,5 @@ class TabBarController: UITabBarController {
             let controllerId = self.description + "ViewController"
             return controllerId
         }
-    }
-}
-
-extension TabBarController: UITabBarControllerDelegate {
-    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        // do something
     }
 }
