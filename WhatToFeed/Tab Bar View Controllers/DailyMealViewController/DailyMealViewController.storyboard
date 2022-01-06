@@ -16,9 +16,24 @@
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aLJ-QI-aM4">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="aLJ-QI-aM4" secondAttribute="trailing" id="Dfe-qE-Fko"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="aLJ-QI-aM4" secondAttribute="bottom" id="k8t-a4-qhQ"/>
+                            <constraint firstItem="aLJ-QI-aM4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="peo-kS-tqa"/>
+                            <constraint firstItem="aLJ-QI-aM4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="zeu-bd-hQr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="aLJ-QI-aM4" id="65t-QR-ySr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

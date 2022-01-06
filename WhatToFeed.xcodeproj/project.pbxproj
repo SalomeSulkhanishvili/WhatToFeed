@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		C30C953227858C8900F6DCA2 /* DailyMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C953127858C8900F6DCA2 /* DailyMealViewController.swift */; };
 		C30C953427858C9B00F6DCA2 /* DailyMealViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30C953327858C9B00F6DCA2 /* DailyMealViewController.storyboard */; };
-		C30C95372785C45F00F6DCA2 /* CurretProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C95362785C45F00F6DCA2 /* CurretProductsListViewController.swift */; };
-		C30C95392785C50900F6DCA2 /* CurretProductsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30C95382785C50900F6DCA2 /* CurretProductsListViewController.storyboard */; };
+		C30C95372785C45F00F6DCA2 /* CurrentProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C95362785C45F00F6DCA2 /* CurrentProductsListViewController.swift */; };
+		C30C95392785C50900F6DCA2 /* CurrentProductsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30C95382785C50900F6DCA2 /* CurrentProductsListViewController.storyboard */; };
 		C30C953D2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30C953C2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard */; };
 		C30C95402785C92300F6DCA2 /* GeneralMealsAndProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C953F2785C92300F6DCA2 /* GeneralMealsAndProductsViewController.swift */; };
 		C30C95442785C98700F6DCA2 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C95432785C98700F6DCA2 /* StatisticsViewController.swift */; };
@@ -27,6 +27,9 @@
 		C31FDEAA2786DDC400E54AB0 /* Aleo-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31FDEA42786DDC300E54AB0 /* Aleo-LightItalic.ttf */; };
 		C31FDEAB2786DDC400E54AB0 /* Aleo-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31FDEA52786DDC400E54AB0 /* Aleo-Italic.ttf */; };
 		C31FDEAC2786DDC400E54AB0 /* Aleo-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31FDEA62786DDC400E54AB0 /* Aleo-Regular.ttf */; };
+		C31FDEAF278709BC00E54AB0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FDEAE278709BC00E54AB0 /* UIView+Extension.swift */; };
+		C31FDEB1278715C200E54AB0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FDEB0278715C200E54AB0 /* UIImage+Extension.swift */; };
+		C31FDEB327871DB900E54AB0 /* EmptyFlowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FDEB227871DB900E54AB0 /* EmptyFlowItem.swift */; };
 		C3AD148F2784372900CD090D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD148E2784372900CD090D /* AppDelegate.swift */; };
 		C3AD14912784372900CD090D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14902784372900CD090D /* SceneDelegate.swift */; };
 		C3AD14932784372900CD090D /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14922784372900CD090D /* GreetingViewController.swift */; };
@@ -59,8 +62,8 @@
 /* Begin PBXFileReference section */
 		C30C953127858C8900F6DCA2 /* DailyMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealViewController.swift; sourceTree = "<group>"; };
 		C30C953327858C9B00F6DCA2 /* DailyMealViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyMealViewController.storyboard; sourceTree = "<group>"; };
-		C30C95362785C45F00F6DCA2 /* CurretProductsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurretProductsListViewController.swift; sourceTree = "<group>"; };
-		C30C95382785C50900F6DCA2 /* CurretProductsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurretProductsListViewController.storyboard; sourceTree = "<group>"; };
+		C30C95362785C45F00F6DCA2 /* CurrentProductsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProductsListViewController.swift; sourceTree = "<group>"; };
+		C30C95382785C50900F6DCA2 /* CurrentProductsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentProductsListViewController.storyboard; sourceTree = "<group>"; };
 		C30C953C2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeneralMealsAndProductsViewController.storyboard; sourceTree = "<group>"; };
 		C30C953F2785C92300F6DCA2 /* GeneralMealsAndProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMealsAndProductsViewController.swift; sourceTree = "<group>"; };
 		C30C95432785C98700F6DCA2 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +80,9 @@
 		C31FDEA42786DDC300E54AB0 /* Aleo-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aleo-LightItalic.ttf"; sourceTree = "<group>"; };
 		C31FDEA52786DDC400E54AB0 /* Aleo-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aleo-Italic.ttf"; sourceTree = "<group>"; };
 		C31FDEA62786DDC400E54AB0 /* Aleo-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aleo-Regular.ttf"; sourceTree = "<group>"; };
+		C31FDEAE278709BC00E54AB0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		C31FDEB0278715C200E54AB0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
+		C31FDEB227871DB900E54AB0 /* EmptyFlowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFlowItem.swift; sourceTree = "<group>"; };
 		C3AD148B2784372900CD090D /* WhatToFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AD148E2784372900CD090D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3AD14902784372900CD090D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,8 +136,8 @@
 		C30C95352785C44400F6DCA2 /* CurretProductsList */ = {
 			isa = PBXGroup;
 			children = (
-				C30C95362785C45F00F6DCA2 /* CurretProductsListViewController.swift */,
-				C30C95382785C50900F6DCA2 /* CurretProductsListViewController.storyboard */,
+				C30C95362785C45F00F6DCA2 /* CurrentProductsListViewController.swift */,
+				C30C95382785C50900F6DCA2 /* CurrentProductsListViewController.storyboard */,
 			);
 			path = CurretProductsList;
 			sourceTree = "<group>";
@@ -142,6 +148,8 @@
 				C30C95492785D1D000F6DCA2 /* UIViewController+Extension.swift */,
 				C30C954B2785D8E700F6DCA2 /* NSObject+Extension.swift */,
 				C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */,
+				C31FDEAE278709BC00E54AB0 /* UIView+Extension.swift */,
+				C31FDEB0278715C200E54AB0 /* UIImage+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -149,8 +157,8 @@
 		C30C953B2785C8F800F6DCA2 /* GeneralMealsAndProducts */ = {
 			isa = PBXGroup;
 			children = (
-				C30C953C2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard */,
 				C30C953F2785C92300F6DCA2 /* GeneralMealsAndProductsViewController.swift */,
+				C30C953C2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard */,
 			);
 			path = GeneralMealsAndProducts;
 			sourceTree = "<group>";
@@ -175,6 +183,7 @@
 		C31FDE9E2786DA8600E54AB0 /* EmptyFlowTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				C31FDEB427871DD800E54AB0 /* Model */,
 				C31FDE9A2786DA6A00E54AB0 /* EmptyFlowTemplate.swift */,
 				C31FDE9C2786DA7D00E54AB0 /* EmptyFlowTemplate.xib */,
 			);
@@ -200,6 +209,22 @@
 				C31FDEA62786DDC400E54AB0 /* Aleo-Regular.ttf */,
 			);
 			path = Aleo;
+			sourceTree = "<group>";
+		};
+		C31FDEAD2786E5C200E54AB0 /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				C31FDE9E2786DA8600E54AB0 /* EmptyFlowTemplate */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		C31FDEB427871DD800E54AB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C31FDEB227871DB900E54AB0 /* EmptyFlowItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C3AD14822784372900CD090D = {
@@ -228,7 +253,8 @@
 				C3AD148E2784372900CD090D /* AppDelegate.swift */,
 				C3AD14902784372900CD090D /* SceneDelegate.swift */,
 				C3AD14BF278441DF00CD090D /* LaunchingScreen */,
-				C3AD14C02784475700CD090D /* View Controllers */,
+				C3AD14C02784475700CD090D /* Tab Bar View Controllers */,
+				C31FDEAD2786E5C200E54AB0 /* Custom Views */,
 				C31FDE9F2786DD5200E54AB0 /* Fonts */,
 				C30C954F278601EA00F6DCA2 /* Constants */,
 				C30C953A2785C57C00F6DCA2 /* Extensions */,
@@ -273,7 +299,7 @@
 			path = LaunchingScreen;
 			sourceTree = "<group>";
 		};
-		C3AD14C02784475700CD090D /* View Controllers */ = {
+		C3AD14C02784475700CD090D /* Tab Bar View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				C3AD14C12784478D00CD090D /* TabBarController.swift */,
@@ -281,9 +307,8 @@
 				C30C95352785C44400F6DCA2 /* CurretProductsList */,
 				C30C953B2785C8F800F6DCA2 /* GeneralMealsAndProducts */,
 				C30C95412785C96400F6DCA2 /* statistics */,
-				C31FDE9E2786DA8600E54AB0 /* EmptyFlowTemplate */,
 			);
-			path = "View Controllers";
+			path = "Tab Bar View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -403,7 +428,7 @@
 				C30C953427858C9B00F6DCA2 /* DailyMealViewController.storyboard in Resources */,
 				C30C953D2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard in Resources */,
 				C3AD14962784372900CD090D /* GreetingViewController.storyboard in Resources */,
-				C30C95392785C50900F6DCA2 /* CurretProductsListViewController.storyboard in Resources */,
+				C30C95392785C50900F6DCA2 /* CurrentProductsListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,13 +457,16 @@
 				C30C954A2785D1D000F6DCA2 /* UIViewController+Extension.swift in Sources */,
 				C30C9551278601F800F6DCA2 /* Colors.swift in Sources */,
 				C3AD14932784372900CD090D /* GreetingViewController.swift in Sources */,
-				C30C95372785C45F00F6DCA2 /* CurretProductsListViewController.swift in Sources */,
+				C31FDEB327871DB900E54AB0 /* EmptyFlowItem.swift in Sources */,
+				C30C95372785C45F00F6DCA2 /* CurrentProductsListViewController.swift in Sources */,
 				C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */,
 				C30C953227858C8900F6DCA2 /* DailyMealViewController.swift in Sources */,
 				C30C95442785C98700F6DCA2 /* StatisticsViewController.swift in Sources */,
+				C31FDEAF278709BC00E54AB0 /* UIView+Extension.swift in Sources */,
 				C30C954C2785D8E700F6DCA2 /* NSObject+Extension.swift in Sources */,
 				C3AD148F2784372900CD090D /* AppDelegate.swift in Sources */,
 				C3AD14C22784478D00CD090D /* TabBarController.swift in Sources */,
+				C31FDEB1278715C200E54AB0 /* UIImage+Extension.swift in Sources */,
 				C30C95402785C92300F6DCA2 /* GeneralMealsAndProductsViewController.swift in Sources */,
 				C3AD14912784372900CD090D /* SceneDelegate.swift in Sources */,
 			);

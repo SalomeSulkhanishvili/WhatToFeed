@@ -7,12 +7,21 @@
 
 import UIKit
 
-class CurretProductsListViewController: UIViewController {
+class CurrentProductsListViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadEmptyView()
 
         // Do any additional setup after loading the view.
+    }
+    
+    private func loadEmptyView() {
+        let emptyView = EmptyFlowTemplate.load(with: EmptyFlowItem(.CurrentProductsList))
+        emptyView.frame = self.contentView.bounds
+        self.contentView.addSubview(emptyView)
+        emptyView.sizeToFit()
     }
     
 

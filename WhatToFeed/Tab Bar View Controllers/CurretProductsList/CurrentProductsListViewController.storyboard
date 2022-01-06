@@ -9,20 +9,35 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Statistics View Controller-->
+        <!--Current Products List View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
-                <viewController storyboardIdentifier="StatisticsViewController" id="Y6W-OH-hqX" customClass="StatisticsViewController" customModule="WhatToFeed" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrentProductsListViewController" id="Y6W-OH-hqX" customClass="CurrentProductsListViewController" customModule="WhatToFeed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4q-F0-zHX">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="h4q-F0-zHX" secondAttribute="trailing" id="cGY-ZY-PZw"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="h4q-F0-zHX" secondAttribute="bottom" id="gdc-vR-3IT"/>
+                            <constraint firstItem="h4q-F0-zHX" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="kQY-qR-rb6"/>
+                            <constraint firstItem="h4q-F0-zHX" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="ypY-MW-l1x"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="h4q-F0-zHX" id="Jin-Pf-ZVc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="72"/>
+            <point key="canvasLocation" x="9" y="90"/>
         </scene>
     </scenes>
     <resources>

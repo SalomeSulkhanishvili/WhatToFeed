@@ -29,8 +29,8 @@ class TabBarController: UITabBarController {
     private func setUpTabBarControllers() {
         if let dailyMeal = getController(with: DailyMealViewController.load(),
                                          type: .DailyMeal),
-           let curretProductsList = getController(with: CurretProductsListViewController.load(),
-                                                  type: .CurretProductsList),
+           let curretProductsList = getController(with: CurrentProductsListViewController.load(),
+                                                  type: .CurrentProductsList),
            let generalMealAndProducts = getController(with: GeneralMealsAndProductsViewController.load(),
                                                       type: .GeneralMealsAndProducts),
            let statistics = getController(with: StatisticsViewController.load(),
@@ -43,7 +43,6 @@ class TabBarController: UITabBarController {
     private func getController<T: UIViewController>(with controller: T?, type: TabBarItemType) -> UINavigationController? {
         guard let viewController = controller else { return nil}
         let navigationController = UINavigationController.init(rootViewController: viewController)
-        
         if #available(iOS 13.0, *) {
             let appearance = UINavigationBarAppearance()
             appearance.backgroundColor = .statusBarLightGray
@@ -72,30 +71,28 @@ extension TabBarController: UITabBarControllerDelegate {
 }
 
 // MARK: - TabBarItemType
-extension TabBarController {
-    enum TabBarItemType: Int {
-        case DailyMeal
-        case CurretProductsList
-        case GeneralMealsAndProducts
-        case statistics
-        
-        var description: String {
-            switch self {
-            case .DailyMeal: return "DailyMeal"
-            case .CurretProductsList: return "CurretProductsList"
-            case .GeneralMealsAndProducts: return "GeneralMealsAndProducts"
-            case .statistics: return "Statistics"
-            }
+enum TabBarItemType: Int {
+    case DailyMeal
+    case CurrentProductsList
+    case GeneralMealsAndProducts
+    case statistics
+    
+    var description: String {
+        switch self {
+        case .DailyMeal: return "DailyMeal"
+        case .CurrentProductsList: return "CurrentProductsList"
+        case .GeneralMealsAndProducts: return "GeneralMealsAndProducts"
+        case .statistics: return "Statistics"
         }
-        
-        func getImageName() -> String {
-            let imageName = self.description + "_icon"
-            return imageName
-        }
-        
-        func getControllerId() -> String {
-            let controllerId = self.description + "ViewController"
-            return controllerId
-        }
+    }
+    
+    func getImageName() -> String {
+        let imageName = self.description + "_icon"
+        return imageName
+    }
+    
+    func getControllerId() -> String {
+        let controllerId = self.description + "ViewController"
+        return controllerId
     }
 }

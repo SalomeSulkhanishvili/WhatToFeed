@@ -1,5 +1,5 @@
 //
-//  GeneralMealsAndProductsViewController.swift
+//  StatisticsViewController.swift
 //  WhatToFeed
 //
 //  Created by Salome Sulkhanishvili on 05.01.22.
@@ -7,12 +7,21 @@
 
 import UIKit
 
-class GeneralMealsAndProductsViewController: UIViewController {
+class StatisticsViewController: UIViewController {
 
+    @IBOutlet weak var contentView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadEmptyView()
 
         // Do any additional setup after loading the view.
+    }
+    
+    private func loadEmptyView() {
+        let emptyView = EmptyFlowTemplate.load(with: EmptyFlowItem(.statistics))
+        emptyView.frame = self.contentView.bounds
+        self.contentView.addSubview(emptyView)
+        emptyView.sizeToFit()
     }
     
 
