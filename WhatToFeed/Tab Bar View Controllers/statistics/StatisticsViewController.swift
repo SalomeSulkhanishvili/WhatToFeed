@@ -7,32 +7,16 @@
 
 import UIKit
 
-class StatisticsViewController: UIViewController {
-
-    @IBOutlet weak var contentView: UIView!
+class StatisticsViewController: TabBarMainController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadEmptyView()
-
-        // Do any additional setup after loading the view.
+        self.loadEmptyView(in: self.contentView)
     }
     
-    private func loadEmptyView() {
-        let emptyView = EmptyFlowTemplate.load(with: EmptyFlowItem(.statistics))
-        emptyView.frame = self.contentView.bounds
-        self.contentView.addSubview(emptyView)
-        emptyView.sizeToFit()
+    static func load() -> StatisticsViewController {
+        let viewController = StatisticsViewController()
+        viewController.type = .statistics
+        return viewController
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

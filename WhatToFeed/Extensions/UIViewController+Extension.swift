@@ -13,13 +13,13 @@ extension UIViewController {
         return UIStoryboard(name: storyboard, bundle: bundle).instantiateInitialViewController() as? T
     }
     
-    static func load(with id: String, from storyboard: String, for bundle: Bundle? = nil) -> Self?
+    static func loadStoryboard(with id: String, from storyboard: String, for bundle: Bundle? = nil) -> Self?
     {
         return self._load(with: id, from: storyboard, for: bundle)
     }
     
     //TODO: remove viewContorell from storyboards name
-    static func load(for bundle: Bundle? = nil) -> Self? {
+    static func loadStoryboard(for bundle: Bundle? = nil) -> Self? {
         return self._load(with: self.className, from: self.className, for: bundle)
     }
 }

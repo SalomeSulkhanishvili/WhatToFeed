@@ -7,20 +7,18 @@
 
 import UIKit
 
-class DailyMealViewController: UIViewController {
-
-    @IBOutlet weak var contentView: UIView!
+class DailyMealViewController: TabBarMainController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadEmptyView()
+        self.loadEmptyView(in: self.contentView)
+        // loadController(GeneralMealsAndProductsViewController.load())
     }
     
-    private func loadEmptyView() {
-        let emptyView = EmptyFlowTemplate.load(with: EmptyFlowItem(.DailyMeal))
-        emptyView.frame = self.contentView.bounds
-        self.contentView.addSubview(emptyView)
-        emptyView.sizeToFit()
+    static func load() -> DailyMealViewController {
+        let viewController = DailyMealViewController()
+        viewController.type = .DailyMeal
+        return viewController
     }
 
 }
-

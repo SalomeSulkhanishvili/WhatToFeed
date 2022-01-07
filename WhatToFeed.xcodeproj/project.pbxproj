@@ -8,13 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C30C953227858C8900F6DCA2 /* DailyMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C953127858C8900F6DCA2 /* DailyMealViewController.swift */; };
-		C30C953427858C9B00F6DCA2 /* DailyMealViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30C953327858C9B00F6DCA2 /* DailyMealViewController.storyboard */; };
 		C30C95372785C45F00F6DCA2 /* CurrentProductsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C95362785C45F00F6DCA2 /* CurrentProductsListViewController.swift */; };
-		C30C95392785C50900F6DCA2 /* CurrentProductsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30C95382785C50900F6DCA2 /* CurrentProductsListViewController.storyboard */; };
-		C30C953D2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30C953C2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard */; };
 		C30C95402785C92300F6DCA2 /* GeneralMealsAndProductsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C953F2785C92300F6DCA2 /* GeneralMealsAndProductsViewController.swift */; };
 		C30C95442785C98700F6DCA2 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C95432785C98700F6DCA2 /* StatisticsViewController.swift */; };
-		C30C95482785CAA000F6DCA2 /* StatisticsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C30C95472785CAA000F6DCA2 /* StatisticsViewController.storyboard */; };
 		C30C954A2785D1D000F6DCA2 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C95492785D1D000F6DCA2 /* UIViewController+Extension.swift */; };
 		C30C954C2785D8E700F6DCA2 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C954B2785D8E700F6DCA2 /* NSObject+Extension.swift */; };
 		C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */; };
@@ -40,6 +36,7 @@
 		C3AD14B02784372F00CD090D /* WhatToFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14AF2784372F00CD090D /* WhatToFeedUITests.swift */; };
 		C3AD14B22784372F00CD090D /* WhatToFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14B12784372F00CD090D /* WhatToFeedUITestsLaunchTests.swift */; };
 		C3AD14C22784478D00CD090D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14C12784478D00CD090D /* TabBarController.swift */; };
+		C3CB722E27887320001229BD /* TabBarMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CB722D27887320001229BD /* TabBarMainController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,13 +58,9 @@
 
 /* Begin PBXFileReference section */
 		C30C953127858C8900F6DCA2 /* DailyMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealViewController.swift; sourceTree = "<group>"; };
-		C30C953327858C9B00F6DCA2 /* DailyMealViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DailyMealViewController.storyboard; sourceTree = "<group>"; };
 		C30C95362785C45F00F6DCA2 /* CurrentProductsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentProductsListViewController.swift; sourceTree = "<group>"; };
-		C30C95382785C50900F6DCA2 /* CurrentProductsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentProductsListViewController.storyboard; sourceTree = "<group>"; };
-		C30C953C2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = GeneralMealsAndProductsViewController.storyboard; sourceTree = "<group>"; };
 		C30C953F2785C92300F6DCA2 /* GeneralMealsAndProductsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralMealsAndProductsViewController.swift; sourceTree = "<group>"; };
 		C30C95432785C98700F6DCA2 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
-		C30C95472785CAA000F6DCA2 /* StatisticsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StatisticsViewController.storyboard; sourceTree = "<group>"; };
 		C30C95492785D1D000F6DCA2 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		C30C954B2785D8E700F6DCA2 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -97,6 +90,7 @@
 		C3AD14AF2784372F00CD090D /* WhatToFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToFeedUITests.swift; sourceTree = "<group>"; };
 		C3AD14B12784372F00CD090D /* WhatToFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C3AD14C12784478D00CD090D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C3CB722D27887320001229BD /* TabBarMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMainController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,7 +122,6 @@
 			isa = PBXGroup;
 			children = (
 				C30C953127858C8900F6DCA2 /* DailyMealViewController.swift */,
-				C30C953327858C9B00F6DCA2 /* DailyMealViewController.storyboard */,
 			);
 			path = DailyMealViewController;
 			sourceTree = "<group>";
@@ -137,7 +130,6 @@
 			isa = PBXGroup;
 			children = (
 				C30C95362785C45F00F6DCA2 /* CurrentProductsListViewController.swift */,
-				C30C95382785C50900F6DCA2 /* CurrentProductsListViewController.storyboard */,
 			);
 			path = CurretProductsList;
 			sourceTree = "<group>";
@@ -158,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				C30C953F2785C92300F6DCA2 /* GeneralMealsAndProductsViewController.swift */,
-				C30C953C2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard */,
 			);
 			path = GeneralMealsAndProducts;
 			sourceTree = "<group>";
@@ -167,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				C30C95432785C98700F6DCA2 /* StatisticsViewController.swift */,
-				C30C95472785CAA000F6DCA2 /* StatisticsViewController.storyboard */,
 			);
 			path = statistics;
 			sourceTree = "<group>";
@@ -303,6 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				C3AD14C12784478D00CD090D /* TabBarController.swift */,
+				C3CB722D27887320001229BD /* TabBarMainController.swift */,
 				C30C953027858C5400F6DCA2 /* DailyMealViewController */,
 				C30C95352785C44400F6DCA2 /* CurretProductsList */,
 				C30C953B2785C8F800F6DCA2 /* GeneralMealsAndProducts */,
@@ -423,12 +414,8 @@
 				C31FDEAA2786DDC400E54AB0 /* Aleo-LightItalic.ttf in Resources */,
 				C31FDEAC2786DDC400E54AB0 /* Aleo-Regular.ttf in Resources */,
 				C31FDEA72786DDC400E54AB0 /* Aleo-Bold.ttf in Resources */,
-				C30C95482785CAA000F6DCA2 /* StatisticsViewController.storyboard in Resources */,
 				C31FDEA92786DDC400E54AB0 /* Aleo-Light.ttf in Resources */,
-				C30C953427858C9B00F6DCA2 /* DailyMealViewController.storyboard in Resources */,
-				C30C953D2785C90E00F6DCA2 /* GeneralMealsAndProductsViewController.storyboard in Resources */,
 				C3AD14962784372900CD090D /* GreetingViewController.storyboard in Resources */,
-				C30C95392785C50900F6DCA2 /* CurrentProductsListViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C31FDE9B2786DA6A00E54AB0 /* EmptyFlowTemplate.swift in Sources */,
+				C3CB722E27887320001229BD /* TabBarMainController.swift in Sources */,
 				C30C954A2785D1D000F6DCA2 /* UIViewController+Extension.swift in Sources */,
 				C30C9551278601F800F6DCA2 /* Colors.swift in Sources */,
 				C3AD14932784372900CD090D /* GreetingViewController.swift in Sources */,
