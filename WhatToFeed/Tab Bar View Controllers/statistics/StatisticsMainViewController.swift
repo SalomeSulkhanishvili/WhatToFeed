@@ -7,16 +7,15 @@
 
 import UIKit
 
-class StatisticsViewController: TabBarMainController {
+class StatisticsMainViewController: TabBarMainController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadEmptyView(in: self.contentView)
     }
     
-    static func load() -> StatisticsViewController {
-        let viewController = StatisticsViewController()
-        viewController.type = .statistics
+    static func load() -> StatisticsMainViewController {
+        let viewController = StatisticsMainViewController(type: .statistics)
         return viewController
     }
 }

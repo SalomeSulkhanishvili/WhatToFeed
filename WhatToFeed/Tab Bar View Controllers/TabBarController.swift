@@ -27,13 +27,13 @@ class TabBarController: UITabBarController {
     }
     
     private func setUpTabBarControllers() {
-        if let dailyMeal = getController(with: DailyMealViewController.load(),
+        if let dailyMeal = getController(with: DailyMealMainViewController.load(),
                                          type: .DailyMeal),
-           let curretProductsList = getController(with: CurrentProductsListViewController.load(),
+           let curretProductsList = getController(with: CurrentProductsListMainViewController.load(),
                                                   type: .CurrentProductsList),
-           let generalMealAndProducts = getController(with: GeneralMealsAndProductsViewController.load(),
+           let generalMealAndProducts = getController(with: GeneralMealsAndProductsMainViewController.load(),
                                                       type: .GeneralMealsAndProducts),
-           let statistics = getController(with: StatisticsViewController.load(),
+           let statistics = getController(with: StatisticsMainViewController.load(),
                                           type: .statistics) {
             
            self.viewControllers = [dailyMeal, curretProductsList, generalMealAndProducts, statistics]
@@ -43,18 +43,6 @@ class TabBarController: UITabBarController {
     private func getController<T: UIViewController>(with controller: T?, type: TabBarItemType) -> UINavigationController? {
         guard let viewController = controller else { return nil}
         let navigationController = UINavigationController.init(rootViewController: viewController)
-        if #available(iOS 13.0, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.backgroundColor = .statusBarLightGray
-            navigationController.navigationBar.scrollEdgeAppearance = appearance
-        } else {
-            // Fallback on earlier versions // TODO: change status bar color
-        }
-        
-        if let image = UIImage(named: "WhatToFeed_with_Info_Mark") {
-            let imageView = UIImageView(image: image)
-            viewController.navigationItem.titleView = imageView
-        } 
         let tabBarItem = UITabBarItem(title: "",
                                       image: UIImage(named: type.getImageName()),
                                       selectedImage: UIImage(named: type.getImageName()))

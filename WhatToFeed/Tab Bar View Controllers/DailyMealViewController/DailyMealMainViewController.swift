@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DailyMealViewController: TabBarMainController {
+class DailyMealMainViewController: TabBarMainController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,10 +15,9 @@ class DailyMealViewController: TabBarMainController {
         // loadController(GeneralMealsAndProductsViewController.load())
     }
     
-    static func load() -> DailyMealViewController {
-        let viewController = DailyMealViewController()
-        viewController.type = .DailyMeal
+    static func load() -> DailyMealMainViewController {
+        let viewController = DailyMealMainViewController(type: .DailyMeal)
         return viewController
     }
-
+    
 }

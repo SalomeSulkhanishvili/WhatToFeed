@@ -25,6 +25,7 @@ extension UIView {
     }
 }
 
+// MARK: - Safe Area Anchors extension
 extension UIView {
 
   var safeTopAnchor: NSLayoutYAxisAnchor {
@@ -34,18 +35,18 @@ extension UIView {
     return topAnchor
   }
 
-  var safeLeftAnchor: NSLayoutXAxisAnchor {
+  var safeLeandingAnchor: NSLayoutXAxisAnchor {
     if #available(iOS 11.0, *){
-      return safeAreaLayoutGuide.leftAnchor
+      return safeAreaLayoutGuide.leadingAnchor
     }
-    return leftAnchor
+    return leadingAnchor
   }
 
-  var safeRightAnchor: NSLayoutXAxisAnchor {
+  var safeTrailingAnchor: NSLayoutXAxisAnchor {
     if #available(iOS 11.0, *){
-      return safeAreaLayoutGuide.rightAnchor
+      return safeAreaLayoutGuide.trailingAnchor
     }
-    return rightAnchor
+    return trailingAnchor
   }
 
   var safeBottomAnchor: NSLayoutYAxisAnchor {

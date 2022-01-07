@@ -7,16 +7,15 @@
 
 import UIKit
 
-class GeneralMealsAndProductsViewController: TabBarMainController {
+class GeneralMealsAndProductsMainViewController: TabBarMainController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadEmptyView(in: self.contentView)
     }
     
-    static func load() -> GeneralMealsAndProductsViewController {
-        let viewController = GeneralMealsAndProductsViewController()
-        viewController.type = .GeneralMealsAndProducts
+    static func load() -> GeneralMealsAndProductsMainViewController {
+        let viewController = GeneralMealsAndProductsMainViewController(type: .GeneralMealsAndProducts)
         return viewController
     }
 }

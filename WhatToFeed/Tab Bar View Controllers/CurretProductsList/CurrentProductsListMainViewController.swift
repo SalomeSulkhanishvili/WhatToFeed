@@ -7,16 +7,15 @@
 
 import UIKit
 
-class CurrentProductsListViewController: TabBarMainController {
+class CurrentProductsListMainViewController: TabBarMainController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.loadEmptyView(in: self.contentView)
     }
     
-    static func load() -> CurrentProductsListViewController {
-        let viewController = CurrentProductsListViewController()
-        viewController.type = .CurrentProductsList
+    static func load() -> CurrentProductsListMainViewController {
+        let viewController = CurrentProductsListMainViewController(type: .CurrentProductsList)
         return viewController
     }
     
