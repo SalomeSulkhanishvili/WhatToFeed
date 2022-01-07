@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 
+// MARK: - load UIView
 extension UIView {
     static func _load<T>(with name: String, for owner: Any? = self, options: [UINib.OptionsKey : Any]? = nil) -> T {
         guard let view = Bundle.main.loadNibNamed(name, owner: owner, options: options)?.first as? T else {
@@ -55,4 +56,14 @@ extension UIView {
     }
     return bottomAnchor
   }
+}
+
+// MARK: - Gradient layer extension
+extension UIView {
+    func LinearbackgroundColor(with colors: [UIColor]){
+        let gradient = CAGradientLayer()
+        gradient.frame = self.bounds
+        gradient.colors = colors.map { $0.cgColor }
+        self.layer.insertSublayer(gradient, at: 0)
+    }
 }

@@ -35,6 +35,8 @@ class EmptyFlowTemplate: UIView {
     }
     
     private func initialization() {
+        templateActionButton.layer.masksToBounds = true
+        templateActionButton.LinearbackgroundColor(with: [.lightBlueActionButton, .lightPurpleActionButton])
         templateActionButton.layer.cornerRadius = templateActionButton.frame.height / 2
         tempalteImageView.image = item?.image
         templateTitleLabel.text = item?.title
