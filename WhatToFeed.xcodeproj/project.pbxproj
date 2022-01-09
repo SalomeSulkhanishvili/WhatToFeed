@@ -40,6 +40,8 @@
 		C3D0C67F278A152900601A69 /* DailyMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C67D278A152900601A69 /* DailyMealCell.swift */; };
 		C3D0C680278A152900601A69 /* DailyMealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0C67E278A152900601A69 /* DailyMealCell.xib */; };
 		C3D0C683278B458C00601A69 /* UICollectionVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */; };
+		C3D0C686278B474500601A69 /* InfoLabelVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C685278B474500601A69 /* InfoLabelVIew.swift */; };
+		C3D0C688278B475000601A69 /* InfoLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0C687278B475000601A69 /* InfoLabelView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,8 @@
 		C3D0C67D278A152900601A69 /* DailyMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealCell.swift; sourceTree = "<group>"; };
 		C3D0C67E278A152900601A69 /* DailyMealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyMealCell.xib; sourceTree = "<group>"; };
 		C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionVIew+Extension.swift"; sourceTree = "<group>"; };
+		C3D0C685278B474500601A69 /* InfoLabelVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelVIew.swift; sourceTree = "<group>"; };
+		C3D0C687278B475000601A69 /* InfoLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoLabelView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +216,7 @@
 		C31FDEAD2786E5C200E54AB0 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				C3D0C684278B472C00601A69 /* Info Label */,
 				C31FDE9E2786DA8600E54AB0 /* EmptyFlowTemplate */,
 			);
 			path = "Custom Views";
@@ -319,6 +324,15 @@
 			path = DailyMealCell;
 			sourceTree = "<group>";
 		};
+		C3D0C684278B472C00601A69 /* Info Label */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0C685278B474500601A69 /* InfoLabelVIew.swift */,
+				C3D0C687278B475000601A69 /* InfoLabelView.xib */,
+			);
+			path = "Info Label";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -424,6 +438,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3AD149B2784372E00CD090D /* LaunchScreen.storyboard in Resources */,
+				C3D0C688278B475000601A69 /* InfoLabelView.xib in Resources */,
 				C31FDE9D2786DA7D00E54AB0 /* EmptyFlowTemplate.xib in Resources */,
 				C31FDEAB2786DDC400E54AB0 /* Aleo-Italic.ttf in Resources */,
 				C31FDEA82786DDC400E54AB0 /* Aleo-BoldItalic.ttf in Resources */,
@@ -467,6 +482,7 @@
 				C30C95372785C45F00F6DCA2 /* CurrentProductsListMainViewController.swift in Sources */,
 				C3D0C683278B458C00601A69 /* UICollectionVIew+Extension.swift in Sources */,
 				C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */,
+				C3D0C686278B474500601A69 /* InfoLabelVIew.swift in Sources */,
 				C30C953227858C8900F6DCA2 /* DailyMealMainViewController.swift in Sources */,
 				C30C95442785C98700F6DCA2 /* StatisticsMainViewController.swift in Sources */,
 				C3D0C67F278A152900601A69 /* DailyMealCell.swift in Sources */,
