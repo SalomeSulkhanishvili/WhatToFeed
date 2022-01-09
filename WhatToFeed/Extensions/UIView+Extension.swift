@@ -67,3 +67,14 @@ extension UIView {
         self.layer.insertSublayer(gradient, at: 0)
     }
 }
+
+// MARK: - shadows
+extension UIView {
+    func addShadow(of color: UIColor, radius: CGFloat, offset: CGSize = .zero, opacity: Float = 1) {
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = color.cgColor
+        self.layer.shadowRadius = radius
+        self.layer.shadowOpacity = opacity
+        self.layer.shadowOffset = offset
+    }
+}

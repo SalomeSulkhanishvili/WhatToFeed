@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Aleo-Bold.ttf">
+            <string>Aleo-Bold</string>
+        </array>
+        <array key="Aleo-Regular.ttf">
+            <string>Aleo-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DailyMealCell" id="gTV-IL-0wX" customClass="DailyMealCell" customModule="WhatToFeed" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="230" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="230" height="400"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeM-ve-Vht" userLabel="contentView">
+                        <rect key="frame" x="5" y="5" width="220" height="390"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal_default_image" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-vj-UO6">
+                                <rect key="frame" x="0.0" y="0.0" width="220" height="200"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="367-NY-wKe"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMx-43-50o">
+                                <rect key="frame" x="7" y="205" width="206" height="13"/>
+                                <fontDescription key="fontDescription" name="Aleo-Bold" family="Aleo" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1YH-EE-wED">
+                                <rect key="frame" x="7" y="228" width="206" height="151"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOb-xZ-Nru" userLabel="lineView">
+                                        <rect key="frame" x="0.0" y="24" width="206" height="1"/>
+                                        <color key="backgroundColor" red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="maO-4S-aFi"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="f18-u6-7Ud">
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="15"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab2-Gv-b5M">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="15"/>
+                                                <color key="backgroundColor" white="0.87064394170000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="IA6-Zs-ksO"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qW9-tB-06P">
+                                                <rect key="frame" x="96" y="0.0" width="75" height="15"/>
+                                                <color key="backgroundColor" white="0.87064394170000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="75" id="pgh-Zx-C0k"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="kPe-pb-pm3"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exX-Pe-mMS">
+                                        <rect key="frame" x="0.0" y="30" width="206" height="15"/>
+                                        <color key="backgroundColor" white="0.87064394165869474" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="G2P-Dg-ygV"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bla bla here will be description of the whole process that is needed in order to cook this food. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEz-5Y-KVe">
+                                        <rect key="frame" x="0.0" y="131" width="206" height="20"/>
+                                        <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="P0i-gY-z5O">
+                                        <rect key="frame" x="3" y="55" width="203" height="66"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. first product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JK-jt-lty">
+                                                <rect key="frame" x="0.0" y="0.0" width="64.5" height="10"/>
+                                                <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. second product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFY-VX-t4m">
+                                                <rect key="frame" x="0.0" y="18.5" width="78.5" height="10"/>
+                                                <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. third product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIc-R3-Ftb">
+                                                <rect key="frame" x="0.0" y="37.5" width="70" height="10"/>
+                                                <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=". . . . . ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTM-Uv-B7b">
+                                                <rect key="frame" x="0.0" y="56" width="23.5" height="10"/>
+                                                <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="exX-Pe-mMS" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" id="3wf-0A-Gsm"/>
+                                    <constraint firstItem="exX-Pe-mMS" firstAttribute="bottom" secondItem="P0i-gY-z5O" secondAttribute="top" constant="-10" id="7g4-kz-K58"/>
+                                    <constraint firstAttribute="bottom" secondItem="fEz-5Y-KVe" secondAttribute="bottom" id="9Ts-Pf-aEz"/>
+                                    <constraint firstAttribute="trailing" secondItem="ZOb-xZ-Nru" secondAttribute="trailing" id="AEB-a4-4ko"/>
+                                    <constraint firstItem="fEz-5Y-KVe" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" id="B3t-y9-RGN"/>
+                                    <constraint firstItem="P0i-gY-z5O" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" constant="3" id="DYK-Zv-iUo"/>
+                                    <constraint firstItem="f18-u6-7Ud" firstAttribute="top" secondItem="1YH-EE-wED" secondAttribute="top" id="Fo6-6O-m6r"/>
+                                    <constraint firstItem="exX-Pe-mMS" firstAttribute="top" secondItem="ZOb-xZ-Nru" secondAttribute="bottom" constant="5" id="Gse-k0-4no"/>
+                                    <constraint firstItem="f18-u6-7Ud" firstAttribute="bottom" secondItem="ZOb-xZ-Nru" secondAttribute="top" constant="-9" id="Hqw-5S-x3k"/>
+                                    <constraint firstItem="f18-u6-7Ud" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" id="Ld7-Cj-met"/>
+                                    <constraint firstAttribute="trailing" secondItem="exX-Pe-mMS" secondAttribute="trailing" id="Lt2-oJ-ReM"/>
+                                    <constraint firstAttribute="trailing" secondItem="P0i-gY-z5O" secondAttribute="trailing" id="V5r-UO-zw3"/>
+                                    <constraint firstItem="ZOb-xZ-Nru" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" id="fvH-nc-o4I"/>
+                                    <constraint firstItem="fEz-5Y-KVe" firstAttribute="top" secondItem="P0i-gY-z5O" secondAttribute="bottom" constant="10" id="nks-3H-UqK"/>
+                                    <constraint firstAttribute="trailing" secondItem="fEz-5Y-KVe" secondAttribute="trailing" id="zQn-TX-ZBo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1YH-EE-wED" firstAttribute="leading" secondItem="SeM-ve-Vht" secondAttribute="leading" constant="7" id="62M-KU-3QL"/>
+                            <constraint firstItem="1YH-EE-wED" firstAttribute="top" secondItem="QMx-43-50o" secondAttribute="bottom" constant="10" id="Far-yt-CPh"/>
+                            <constraint firstItem="1YH-EE-wED" firstAttribute="trailing" secondItem="SeM-ve-Vht" secondAttribute="trailing" constant="-7" id="MfA-00-o4S"/>
+                            <constraint firstItem="qNh-vj-UO6" firstAttribute="top" secondItem="SeM-ve-Vht" secondAttribute="top" id="OXw-Oq-Sak"/>
+                            <constraint firstItem="qNh-vj-UO6" firstAttribute="trailing" secondItem="SeM-ve-Vht" secondAttribute="trailing" id="YJA-i5-lZb"/>
+                            <constraint firstItem="1YH-EE-wED" firstAttribute="bottom" secondItem="SeM-ve-Vht" secondAttribute="bottom" constant="-11" id="ZRA-nX-hXY"/>
+                            <constraint firstItem="QMx-43-50o" firstAttribute="trailing" secondItem="SeM-ve-Vht" secondAttribute="trailing" constant="-7" id="dD2-jy-sJx"/>
+                            <constraint firstItem="qNh-vj-UO6" firstAttribute="leading" secondItem="SeM-ve-Vht" secondAttribute="leading" id="fhb-ho-Qho"/>
+                            <constraint firstItem="QMx-43-50o" firstAttribute="leading" secondItem="SeM-ve-Vht" secondAttribute="leading" constant="7" id="sXB-Dc-5uW"/>
+                            <constraint firstItem="QMx-43-50o" firstAttribute="top" secondItem="qNh-vj-UO6" secondAttribute="bottom" constant="5" id="tkV-RX-Ukd"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="SeM-ve-Vht" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailing" constant="-5" id="5qc-r8-BrX"/>
+                <constraint firstItem="SeM-ve-Vht" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="MVq-G3-8ml"/>
+                <constraint firstItem="SeM-ve-Vht" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottom" constant="-5" id="YUn-kC-IaM"/>
+                <constraint firstItem="SeM-ve-Vht" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="hpO-7H-FnW"/>
+            </constraints>
+            <connections>
+                <outlet property="mainView" destination="SeM-ve-Vht" id="WLm-cS-cae"/>
+                <outlet property="mealImageView" destination="qNh-vj-UO6" id="65U-H9-XuK"/>
+                <outlet property="mealTitleLabel" destination="QMx-43-50o" id="Syb-TE-QLM"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="meal_default_image" width="230" height="210"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -39,6 +39,7 @@
 		C3CB722E27887320001229BD /* TabBarMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CB722D27887320001229BD /* TabBarMainController.swift */; };
 		C3D0C67F278A152900601A69 /* DailyMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C67D278A152900601A69 /* DailyMealCell.swift */; };
 		C3D0C680278A152900601A69 /* DailyMealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0C67E278A152900601A69 /* DailyMealCell.xib */; };
+		C3D0C683278B458C00601A69 /* UICollectionVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		C3CB722D27887320001229BD /* TabBarMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMainController.swift; sourceTree = "<group>"; };
 		C3D0C67D278A152900601A69 /* DailyMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealCell.swift; sourceTree = "<group>"; };
 		C3D0C67E278A152900601A69 /* DailyMealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyMealCell.xib; sourceTree = "<group>"; };
+		C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionVIew+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				C30C953127858C8900F6DCA2 /* DailyMealMainViewController.swift */,
+				C3D0C681278A1CB600601A69 /* DailyMealCell */,
 			);
 			path = DailyMealViewController;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 				C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */,
 				C31FDEAE278709BC00E54AB0 /* UIView+Extension.swift */,
 				C31FDEB0278715C200E54AB0 /* UIImage+Extension.swift */,
+				C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -296,7 +300,6 @@
 		C3AD14C02784475700CD090D /* Tab Bar View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				C3D0C681278A1CB600601A69 /* DailyMealCell */,
 				C3AD14C12784478D00CD090D /* TabBarController.swift */,
 				C3CB722D27887320001229BD /* TabBarMainController.swift */,
 				C30C953027858C5400F6DCA2 /* DailyMealViewController */,
@@ -462,6 +465,7 @@
 				C3AD14932784372900CD090D /* GreetingViewController.swift in Sources */,
 				C31FDEB327871DB900E54AB0 /* EmptyFlowItem.swift in Sources */,
 				C30C95372785C45F00F6DCA2 /* CurrentProductsListMainViewController.swift in Sources */,
+				C3D0C683278B458C00601A69 /* UICollectionVIew+Extension.swift in Sources */,
 				C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */,
 				C30C953227858C8900F6DCA2 /* DailyMealMainViewController.swift in Sources */,
 				C30C95442785C98700F6DCA2 /* StatisticsMainViewController.swift in Sources */,
