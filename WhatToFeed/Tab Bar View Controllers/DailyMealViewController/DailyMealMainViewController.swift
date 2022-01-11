@@ -14,8 +14,8 @@ class DailyMealMainViewController: TabBarMainController {
     private lazy var greetingTitleLabel: UILabel = { loadGreetingTitleLabel() }()
     private lazy var subTitleLabel: UILabel = { loadSubTitleLabel() }()
     
-    private let dailyMealCellSize = CGSize(width: 230, height: 400)
-    private let categoryCellSize = CGSize(width: 100, height: 40)
+    private let dailyMealCellHeight: CGFloat = 400
+    private let categoryCellHeight: CGFloat = 40
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +36,34 @@ class DailyMealMainViewController: TabBarMainController {
         contentView.addSubview(categoryCollectionView)
         contentView.addSubview(greetingTitleLabel)
         contentView.addSubview(subTitleLabel)
-        updateCollectionViewConstraints()
+        setCollectionViewConstraints()
+    }
+}
+
+// MARK: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
+extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if collectionView == self.dailyMealCollectionView {
+            return 5 // just for testing purpose
+        } else {
+            return 10
+        }
     }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == self.dailyMealCollectionView {
+            let cell: DailyMealCell = dailyMealCollectionView.dequeueReusableCell(for: indexPath)
+            cell.load(with: "")
+            return cell
+        } else {
+            let cell: DailyMealCategoryCell = categoryCollectionView.dequeueReusableCell(for: indexPath)
+            return cell
+        }
+    }
+}
+
+// MARK: SetUp UI components
+extension DailyMealMainViewController {
     private func loadGreetingTitleLabel() -> UILabel {
         let title = UILabel()
         title.numberOfLines = 1
@@ -57,7 +82,44 @@ class DailyMealMainViewController: TabBarMainController {
         return subTitle
     }
     
-    private func updateCollectionViewConstraints(){
+    private func loadCategoryCollectionView() -> UICollectionView {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let width = categoryCellHeight * (10/4) // 100 : 40
+        layout.itemSize = CGSize(width: width, height: categoryCellHeight)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView.registerCell(withType: DailyMealCategoryCell.self)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }
+    
+    private func loadDailyMealCollectionView() -> UICollectionView {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let width: CGFloat = dailyMealCellHeight * 0.575 // 230 : 400
+        layout.itemSize = CGSize(width: width, height: dailyMealCellHeight)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionView.registerCell(withType: DailyMealCell.self)
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = .white
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }
+}
+
+// MARK: SetUp Constraints
+extension DailyMealMainViewController {
+    private func setCollectionViewConstraints(){
         NSLayoutConstraint.activate([
             greetingTitleLabel.topAnchor.constraint(equalTo: contentView.safeTopAnchor,
                                                     constant: 14),
@@ -77,7 +139,7 @@ class DailyMealMainViewController: TabBarMainController {
         ])
         
         NSLayoutConstraint.activate([
-            categoryCollectionView.heightAnchor.constraint(equalToConstant: categoryCellSize.height + 10),
+            categoryCollectionView.heightAnchor.constraint(equalToConstant: (categoryCellHeight + 10)),
             categoryCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             categoryCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             categoryCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,
@@ -85,7 +147,6 @@ class DailyMealMainViewController: TabBarMainController {
         ])
         
         NSLayoutConstraint.activate([
-            //TODO: should change top anchor
             dailyMealCollectionView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor,
                                                          constant: 10),
             dailyMealCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -97,66 +158,4 @@ class DailyMealMainViewController: TabBarMainController {
         dailyMealCollectionView.reloadData()
         categoryCollectionView.reloadData()
     }
-    
-    private func loadCategoryCollectionView() -> UICollectionView {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.itemSize = categoryCellSize
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
-        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        collectionView.registerCell(withType: DailyMealCategoryCell.self)
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.backgroundColor = .clear
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        return collectionView
-    }
-    
-    private func loadDailyMealCollectionView() -> UICollectionView {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.itemSize = dailyMealCellSize
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
-        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        collectionView.registerCell(withType: DailyMealCell.self)
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.backgroundColor = .white
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-        return collectionView
-    }
 }
-
-extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if collectionView == self.dailyMealCollectionView {
-            return 5 // just for testing purpose
-        } else {
-            return 10
-        }
-        
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if collectionView == self.dailyMealCollectionView {
-            if let cell: DailyMealCell = dailyMealCollectionView.dequeueReusableCell(for: indexPath) {
-                cell.load(with: "")
-                return cell
-            } else {
-                fatalError("incorrect cell for DailyMealCell")
-            }
-        } else {
-            if let cell: DailyMealCategoryCell = categoryCollectionView.dequeueReusableCell(for: indexPath) {
-                return cell
-            } else {
-                fatalError("incorrect cell for DailyMealCell")
-            }
-        }
-    }
-}
-
-

@@ -14,7 +14,11 @@ extension UICollectionView {
         self.register(cell, forCellWithReuseIdentifier: T.className)
     }
     
-    func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T? {
-        return self.dequeueReusableCell(withReuseIdentifier: T.className, for: indexPath) as? T
+    func dequeueReusableCell<T: UICollectionViewCell>(for indexPath: IndexPath) -> T {
+        if let cell = self.dequeueReusableCell(withReuseIdentifier: T.className,
+                                               for: indexPath) as? T {
+            return cell
+        }
+        else { fatalError("incorrect cell for \(T.className)") }
     }
 }

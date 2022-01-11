@@ -29,7 +29,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SeM-ve-Vht" userLabel="contentView">
                         <rect key="frame" x="5" y="5" width="220" height="390"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal_default_image" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-vj-UO6">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal_default_image" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-vj-UO6">
                                 <rect key="frame" x="0.0" y="0.0" width="220" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -81,14 +81,14 @@
                                             <constraint firstAttribute="height" constant="15" id="G2P-Dg-ygV"/>
                                         </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bla bla here will be description of the whole process that is needed in order to cook this food. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEz-5Y-KVe">
-                                        <rect key="frame" x="0.0" y="131" width="206" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bla bla here will be description of the whole process that is needed in order to cook this food. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEz-5Y-KVe">
+                                        <rect key="frame" x="0.0" y="120" width="206" height="30"/>
                                         <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="P0i-gY-z5O">
-                                        <rect key="frame" x="3" y="55" width="203" height="66"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="P0i-gY-z5O">
+                                        <rect key="frame" x="3" y="55" width="203" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. first product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JK-jt-lty">
                                                 <rect key="frame" x="0.0" y="0.0" width="64.5" height="10"/>
@@ -97,19 +97,19 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. second product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFY-VX-t4m">
-                                                <rect key="frame" x="0.0" y="18.5" width="78.5" height="10"/>
+                                                <rect key="frame" x="0.0" y="15" width="78.5" height="10"/>
                                                 <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. third product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIc-R3-Ftb">
-                                                <rect key="frame" x="0.0" y="37.5" width="70" height="10"/>
+                                                <rect key="frame" x="0.0" y="30" width="70" height="10"/>
                                                 <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=". . . . . ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTM-Uv-B7b">
-                                                <rect key="frame" x="0.0" y="56" width="23.5" height="10"/>
+                                                <rect key="frame" x="0.0" y="45" width="23.5" height="10"/>
                                                 <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -121,7 +121,7 @@
                                 <constraints>
                                     <constraint firstItem="exX-Pe-mMS" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" id="3wf-0A-Gsm"/>
                                     <constraint firstItem="exX-Pe-mMS" firstAttribute="bottom" secondItem="P0i-gY-z5O" secondAttribute="top" constant="-10" id="7g4-kz-K58"/>
-                                    <constraint firstAttribute="bottom" secondItem="fEz-5Y-KVe" secondAttribute="bottom" id="9Ts-Pf-aEz"/>
+                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fEz-5Y-KVe" secondAttribute="bottom" id="9Ts-Pf-aEz"/>
                                     <constraint firstAttribute="trailing" secondItem="ZOb-xZ-Nru" secondAttribute="trailing" id="AEB-a4-4ko"/>
                                     <constraint firstItem="fEz-5Y-KVe" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" id="B3t-y9-RGN"/>
                                     <constraint firstItem="P0i-gY-z5O" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" constant="3" id="DYK-Zv-iUo"/>

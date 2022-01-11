@@ -332,8 +332,8 @@
 		C3D0C681278A1CB600601A69 /* DailyMealCell */ = {
 			isa = PBXGroup;
 			children = (
-				C3D0C67E278A152900601A69 /* DailyMealCell.xib */,
 				C3D0C67D278A152900601A69 /* DailyMealCell.swift */,
+				C3D0C67E278A152900601A69 /* DailyMealCell.xib */,
 			);
 			path = DailyMealCell;
 			sourceTree = "<group>";
