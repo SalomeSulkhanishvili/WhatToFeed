@@ -26,6 +26,8 @@
 		C31FDEAF278709BC00E54AB0 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FDEAE278709BC00E54AB0 /* UIView+Extension.swift */; };
 		C31FDEB1278715C200E54AB0 /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FDEB0278715C200E54AB0 /* UIImage+Extension.swift */; };
 		C31FDEB327871DB900E54AB0 /* EmptyFlowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FDEB227871DB900E54AB0 /* EmptyFlowItem.swift */; };
+		C3551401278DEF4E003A5370 /* DailyMealCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35513FF278DEF4E003A5370 /* DailyMealCategoryCell.swift */; };
+		C3551402278DEF4E003A5370 /* DailyMealCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3551400278DEF4E003A5370 /* DailyMealCategoryCell.xib */; };
 		C3AD148F2784372900CD090D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD148E2784372900CD090D /* AppDelegate.swift */; };
 		C3AD14912784372900CD090D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14902784372900CD090D /* SceneDelegate.swift */; };
 		C3AD14932784372900CD090D /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14922784372900CD090D /* GreetingViewController.swift */; };
@@ -81,6 +83,8 @@
 		C31FDEAE278709BC00E54AB0 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		C31FDEB0278715C200E54AB0 /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		C31FDEB227871DB900E54AB0 /* EmptyFlowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFlowItem.swift; sourceTree = "<group>"; };
+		C35513FF278DEF4E003A5370 /* DailyMealCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealCategoryCell.swift; sourceTree = "<group>"; };
+		C3551400278DEF4E003A5370 /* DailyMealCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyMealCategoryCell.xib; sourceTree = "<group>"; };
 		C3AD148B2784372900CD090D /* WhatToFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AD148E2784372900CD090D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3AD14902784372900CD090D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -133,6 +137,7 @@
 			children = (
 				C30C953127858C8900F6DCA2 /* DailyMealMainViewController.swift */,
 				C3D0C681278A1CB600601A69 /* DailyMealCell */,
+				C35513FC278DEEE5003A5370 /* DailyMealCategoryCell */,
 			);
 			path = DailyMealViewController;
 			sourceTree = "<group>";
@@ -228,6 +233,15 @@
 				C31FDEB227871DB900E54AB0 /* EmptyFlowItem.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C35513FC278DEEE5003A5370 /* DailyMealCategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				C35513FF278DEF4E003A5370 /* DailyMealCategoryCell.swift */,
+				C3551400278DEF4E003A5370 /* DailyMealCategoryCell.xib */,
+			);
+			path = DailyMealCategoryCell;
 			sourceTree = "<group>";
 		};
 		C3AD14822784372900CD090D = {
@@ -437,6 +451,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3551402278DEF4E003A5370 /* DailyMealCategoryCell.xib in Resources */,
 				C3AD149B2784372E00CD090D /* LaunchScreen.storyboard in Resources */,
 				C3D0C688278B475000601A69 /* InfoLabelView.xib in Resources */,
 				C31FDE9D2786DA7D00E54AB0 /* EmptyFlowTemplate.xib in Resources */,
@@ -492,6 +507,7 @@
 				C3AD14C22784478D00CD090D /* TabBarController.swift in Sources */,
 				C31FDEB1278715C200E54AB0 /* UIImage+Extension.swift in Sources */,
 				C30C95402785C92300F6DCA2 /* GeneralMealsAndProductsMainViewController.swift in Sources */,
+				C3551401278DEF4E003A5370 /* DailyMealCategoryCell.swift in Sources */,
 				C3AD14912784372900CD090D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
