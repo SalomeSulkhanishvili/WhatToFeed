@@ -28,6 +28,8 @@
 		C31FDEB327871DB900E54AB0 /* EmptyFlowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FDEB227871DB900E54AB0 /* EmptyFlowItem.swift */; };
 		C3551401278DEF4E003A5370 /* DailyMealCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35513FF278DEF4E003A5370 /* DailyMealCategoryCell.swift */; };
 		C3551402278DEF4E003A5370 /* DailyMealCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3551400278DEF4E003A5370 /* DailyMealCategoryCell.xib */; };
+		C3551404278E161E003A5370 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3551403278E161E003A5370 /* UIDevice+Extension.swift */; };
+		C3551406278E2418003A5370 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3551405278E2418003A5370 /* Int+Extension.swift */; };
 		C3AD148F2784372900CD090D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD148E2784372900CD090D /* AppDelegate.swift */; };
 		C3AD14912784372900CD090D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14902784372900CD090D /* SceneDelegate.swift */; };
 		C3AD14932784372900CD090D /* GreetingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14922784372900CD090D /* GreetingViewController.swift */; };
@@ -85,6 +87,8 @@
 		C31FDEB227871DB900E54AB0 /* EmptyFlowItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFlowItem.swift; sourceTree = "<group>"; };
 		C35513FF278DEF4E003A5370 /* DailyMealCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealCategoryCell.swift; sourceTree = "<group>"; };
 		C3551400278DEF4E003A5370 /* DailyMealCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyMealCategoryCell.xib; sourceTree = "<group>"; };
+		C3551403278E161E003A5370 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
+		C3551405278E2418003A5370 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		C3AD148B2784372900CD090D /* WhatToFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AD148E2784372900CD090D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3AD14902784372900CD090D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				C31FDEAE278709BC00E54AB0 /* UIView+Extension.swift */,
 				C31FDEB0278715C200E54AB0 /* UIImage+Extension.swift */,
 				C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */,
+				C3551403278E161E003A5370 /* UIDevice+Extension.swift */,
+				C3551405278E2418003A5370 /* Int+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -491,6 +497,7 @@
 				C31FDE9B2786DA6A00E54AB0 /* EmptyFlowTemplate.swift in Sources */,
 				C3CB722E27887320001229BD /* TabBarMainController.swift in Sources */,
 				C30C954A2785D1D000F6DCA2 /* UIViewController+Extension.swift in Sources */,
+				C3551404278E161E003A5370 /* UIDevice+Extension.swift in Sources */,
 				C30C9551278601F800F6DCA2 /* Colors.swift in Sources */,
 				C3AD14932784372900CD090D /* GreetingViewController.swift in Sources */,
 				C31FDEB327871DB900E54AB0 /* EmptyFlowItem.swift in Sources */,
@@ -504,6 +511,7 @@
 				C31FDEAF278709BC00E54AB0 /* UIView+Extension.swift in Sources */,
 				C30C954C2785D8E700F6DCA2 /* NSObject+Extension.swift in Sources */,
 				C3AD148F2784372900CD090D /* AppDelegate.swift in Sources */,
+				C3551406278E2418003A5370 /* Int+Extension.swift in Sources */,
 				C3AD14C22784478D00CD090D /* TabBarController.swift in Sources */,
 				C31FDEB1278715C200E54AB0 /* UIImage+Extension.swift in Sources */,
 				C30C95402785C92300F6DCA2 /* GeneralMealsAndProductsMainViewController.swift in Sources */,

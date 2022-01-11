@@ -14,8 +14,8 @@ class DailyMealMainViewController: TabBarMainController {
     private lazy var greetingTitleLabel: UILabel = { loadGreetingTitleLabel() }()
     private lazy var subTitleLabel: UILabel = { loadSubTitleLabel() }()
     
-    private let dailyMealCellHeight: CGFloat = 400
-    private let categoryCellHeight: CGFloat = 40
+    private let dailyMealCellHeight: CGFloat = 400 * UIDevice.screenFactor
+    private let categoryCellHeight: CGFloat = 40 * UIDevice.screenFactor
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,11 +83,12 @@ extension DailyMealMainViewController {
     }
     
     private func loadCategoryCollectionView() -> UICollectionView {
+        let sideEndge = 20 * UIDevice.screenFactor
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let width = categoryCellHeight * (10/4) // 100 : 40
         layout.itemSize = CGSize(width: width, height: categoryCellHeight)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: sideEndge, bottom: 0, right: sideEndge)
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.registerCell(withType: DailyMealCategoryCell.self)
         
@@ -100,11 +101,12 @@ extension DailyMealMainViewController {
     }
     
     private func loadDailyMealCollectionView() -> UICollectionView {
+        let sideEndge = 20 * UIDevice.screenFactor
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
         let width: CGFloat = dailyMealCellHeight * 0.575 // 230 : 400
         layout.itemSize = CGSize(width: width, height: dailyMealCellHeight)
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: sideEndge, bottom: 0, right: sideEndge)
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.registerCell(withType: DailyMealCell.self)
         
@@ -122,37 +124,36 @@ extension DailyMealMainViewController {
     private func setCollectionViewConstraints(){
         NSLayoutConstraint.activate([
             greetingTitleLabel.topAnchor.constraint(equalTo: contentView.safeTopAnchor,
-                                                    constant: 14),
+                                                    constant: 14 * UIDevice.screenFactor),
             greetingTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,
-                                                        constant: 20),
+                                                        constant: 20 * UIDevice.screenFactor),
             greetingTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,
-                                                         constant: -20)
+                                                         constant: -20 * UIDevice.screenFactor)
         ])
         
         NSLayoutConstraint.activate([
             subTitleLabel.topAnchor.constraint(equalTo: greetingTitleLabel.bottomAnchor,
-                                               constant: 7),
+                                               constant: 7 * UIDevice.screenFactor),
             subTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,
-                                                   constant: 20),
+                                                   constant: 20 * UIDevice.screenFactor),
             subTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,
-                                                    constant: -20)
-        ])
-        
-        NSLayoutConstraint.activate([
-            categoryCollectionView.heightAnchor.constraint(equalToConstant: (categoryCellHeight + 10)),
-            categoryCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            categoryCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            categoryCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,
-                                                           constant: -14)
+                                                    constant: -20 * UIDevice.screenFactor)
         ])
         
         NSLayoutConstraint.activate([
             dailyMealCollectionView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor,
-                                                         constant: 10),
+                                                         constant: 5 * UIDevice.screenFactor),
             dailyMealCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             dailyMealCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            dailyMealCollectionView.bottomAnchor.constraint(equalTo: categoryCollectionView.topAnchor,
-                                                            constant: -22)
+            dailyMealCollectionView.heightAnchor.constraint(equalToConstant: (dailyMealCellHeight + 10))
+        ])
+            
+        NSLayoutConstraint.activate([
+            categoryCollectionView.topAnchor.constraint(equalTo: dailyMealCollectionView.bottomAnchor),
+            categoryCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            categoryCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            categoryCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,
+                                                           constant: -10 * UIDevice.screenFactor)
         ])
         
         dailyMealCollectionView.reloadData()
