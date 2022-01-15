@@ -269,7 +269,8 @@ extension UIDevice {
                   return 1.58
               default:
                 // TODO: still needs investigation 
-                  return UIScreen.main.bounds.size.height / 667 // based on iphone 8 height
+                  return UIScreen.main.bounds.size.width / 375 // based on iphone 8 height
+                //375x667 width
             }
         }
     }

@@ -42,6 +42,18 @@ class DailyMealMainViewController: TabBarMainController {
 
 // MARK: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout
 extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == dailyMealCollectionView {
+            let height = collectionView.frame.height - 30
+            let width = height * 0.575 // 230 : 400
+            return CGSize(width: width, height: height)
+        } else {
+            let width = categoryCellHeight * (10/4) // 100 : 40
+            return CGSize(width: width, height: categoryCellHeight)
+        }
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.dailyMealCollectionView {
             return 5 // just for testing purpose
@@ -86,8 +98,6 @@ extension DailyMealMainViewController {
         let sideEndge = 20 * UIDevice.screenFactor
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        let width = categoryCellHeight * (10/4) // 100 : 40
-        layout.itemSize = CGSize(width: width, height: categoryCellHeight)
         layout.sectionInset = UIEdgeInsets(top: 0, left: sideEndge, bottom: 0, right: sideEndge)
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.registerCell(withType: DailyMealCategoryCell.self)
@@ -104,8 +114,6 @@ extension DailyMealMainViewController {
         let sideEndge = 20 * UIDevice.screenFactor
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        let width: CGFloat = dailyMealCellHeight * 0.575 // 230 : 400
-        layout.itemSize = CGSize(width: width, height: dailyMealCellHeight)
         layout.sectionInset = UIEdgeInsets(top: 0, left: sideEndge, bottom: 0, right: sideEndge)
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         collectionView.registerCell(withType: DailyMealCell.self)
@@ -141,19 +149,19 @@ extension DailyMealMainViewController {
         ])
         
         NSLayoutConstraint.activate([
+            categoryCollectionView.heightAnchor.constraint(equalToConstant: categoryCellHeight + 10),
+            categoryCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            categoryCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            categoryCollectionView.bottomAnchor.constraint(equalTo: contentView.safeBottomAnchor,
+                                                           constant: -10 * UIDevice.screenFactor)
+        ])
+        
+        NSLayoutConstraint.activate([
             dailyMealCollectionView.topAnchor.constraint(equalTo: subTitleLabel.bottomAnchor,
                                                          constant: 5 * UIDevice.screenFactor),
             dailyMealCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             dailyMealCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            dailyMealCollectionView.heightAnchor.constraint(equalToConstant: (dailyMealCellHeight + 10))
-        ])
-            
-        NSLayoutConstraint.activate([
-            categoryCollectionView.topAnchor.constraint(equalTo: dailyMealCollectionView.bottomAnchor),
-            categoryCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            categoryCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            categoryCollectionView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor,
-                                                           constant: -10 * UIDevice.screenFactor)
+            dailyMealCollectionView.bottomAnchor.constraint(equalTo: categoryCollectionView.topAnchor, constant: -10)
         ])
         
         dailyMealCollectionView.reloadData()
