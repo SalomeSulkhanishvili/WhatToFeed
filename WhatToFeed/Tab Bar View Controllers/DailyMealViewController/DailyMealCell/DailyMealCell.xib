@@ -53,7 +53,7 @@
                                 <rect key="frame" x="7" y="213" width="206" height="166"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOb-xZ-Nru" userLabel="lineView">
-                                        <rect key="frame" x="0.0" y="24" width="206" height="1"/>
+                                        <rect key="frame" x="0.0" y="29" width="206" height="1"/>
                                         <color key="backgroundColor" red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="maO-4S-aFi">
@@ -64,40 +64,32 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="f18-u6-7Ud">
-                                        <rect key="frame" x="0.0" y="0.0" width="171" height="15"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="171" height="20"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ab2-Gv-b5M">
-                                                <rect key="frame" x="0.0" y="0.0" width="75" height="15"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="20"/>
                                                 <color key="backgroundColor" white="0.87064394170000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="75" id="IA6-Zs-ksO">
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </constraint>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="4Dh-rq-sa3"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qW9-tB-06P">
-                                                <rect key="frame" x="96" y="0.0" width="75" height="15"/>
+                                                <rect key="frame" x="96" y="0.0" width="75" height="20"/>
                                                 <color key="backgroundColor" white="0.87064394170000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="75" id="pgh-Zx-C0k">
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </constraint>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="GqV-br-x2h"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="kPe-pb-pm3"/>
+                                            <constraint firstAttribute="height" constant="20" id="kPe-pb-pm3"/>
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="exX-Pe-mMS">
-                                        <rect key="frame" x="0.0" y="30" width="206" height="15"/>
+                                        <rect key="frame" x="0.0" y="35" width="206" height="20"/>
                                         <color key="backgroundColor" white="0.87064394165869474" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="G2P-Dg-ygV">
+                                            <constraint firstAttribute="height" constant="20" id="G2P-Dg-ygV">
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
@@ -105,13 +97,16 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bla bla here will be description of the whole process that is needed in order to cook this food. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEz-5Y-KVe">
-                                        <rect key="frame" x="0.0" y="120" width="206" height="30"/>
+                                        <rect key="frame" x="0.0" y="130" width="206" height="30"/>
                                         <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustFontSizeToFitDevice" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="P0i-gY-z5O">
-                                        <rect key="frame" x="3" y="55" width="203" height="55"/>
+                                        <rect key="frame" x="3" y="65" width="203" height="55"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. first product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8JK-jt-lty">
                                                 <rect key="frame" x="0.0" y="0.0" width="64.5" height="10"/>
@@ -262,9 +257,12 @@
             </constraints>
             <size key="customSize" width="230" height="398"/>
             <connections>
+                <outlet property="foodRecipeView" destination="exX-Pe-mMS" id="93I-fj-tNJ"/>
                 <outlet property="mainView" destination="SeM-ve-Vht" id="WLm-cS-cae"/>
                 <outlet property="mealImageView" destination="qNh-vj-UO6" id="65U-H9-XuK"/>
                 <outlet property="mealTitleLabel" destination="QMx-43-50o" id="Syb-TE-QLM"/>
+                <outlet property="portionView" destination="ab2-Gv-b5M" id="L8E-fX-g3q"/>
+                <outlet property="timeView" destination="qW9-tB-06P" id="8Wf-Yg-pno"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="103.125"/>
         </collectionViewCell>

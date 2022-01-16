@@ -44,7 +44,7 @@
 		C3D0C67F278A152900601A69 /* DailyMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C67D278A152900601A69 /* DailyMealCell.swift */; };
 		C3D0C680278A152900601A69 /* DailyMealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0C67E278A152900601A69 /* DailyMealCell.xib */; };
 		C3D0C683278B458C00601A69 /* UICollectionVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */; };
-		C3D0C686278B474500601A69 /* InfoLabelVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C685278B474500601A69 /* InfoLabelVIew.swift */; };
+		C3D0C686278B474500601A69 /* InfoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C685278B474500601A69 /* InfoLabelView.swift */; };
 		C3D0C688278B475000601A69 /* InfoLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0C687278B475000601A69 /* InfoLabelView.xib */; };
 		C3DBB9AE279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBB9AD279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift */; };
 		C3DBB9B22794699E0055A0E3 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBB9B12794699E0055A0E3 /* UIFont+Extension.swift */; };
@@ -111,7 +111,7 @@
 		C3D0C67D278A152900601A69 /* DailyMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealCell.swift; sourceTree = "<group>"; };
 		C3D0C67E278A152900601A69 /* DailyMealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyMealCell.xib; sourceTree = "<group>"; };
 		C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionVIew+Extension.swift"; sourceTree = "<group>"; };
-		C3D0C685278B474500601A69 /* InfoLabelVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelVIew.swift; sourceTree = "<group>"; };
+		C3D0C685278B474500601A69 /* InfoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelView.swift; sourceTree = "<group>"; };
 		C3D0C687278B475000601A69 /* InfoLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoLabelView.xib; sourceTree = "<group>"; };
 		C3DBB9AD279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "screenFactor_IBInspectable + UI Extensions.swift"; sourceTree = "<group>"; };
 		C3DBB9B12794699E0055A0E3 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
@@ -359,7 +359,7 @@
 		C3D0C684278B472C00601A69 /* Info Label */ = {
 			isa = PBXGroup;
 			children = (
-				C3D0C685278B474500601A69 /* InfoLabelVIew.swift */,
+				C3D0C685278B474500601A69 /* InfoLabelView.swift */,
 				C3D0C687278B475000601A69 /* InfoLabelView.xib */,
 			);
 			path = "Info Label";
@@ -517,7 +517,7 @@
 				C3D0C683278B458C00601A69 /* UICollectionVIew+Extension.swift in Sources */,
 				C3DBB9B22794699E0055A0E3 /* UIFont+Extension.swift in Sources */,
 				C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */,
-				C3D0C686278B474500601A69 /* InfoLabelVIew.swift in Sources */,
+				C3D0C686278B474500601A69 /* InfoLabelView.swift in Sources */,
 				C30C953227858C8900F6DCA2 /* DailyMealMainViewController.swift in Sources */,
 				C30C95442785C98700F6DCA2 /* StatisticsMainViewController.swift in Sources */,
 				C3D0C67F278A152900601A69 /* DailyMealCell.swift in Sources */,
