@@ -65,12 +65,17 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
         if collectionView == self.dailyMealCollectionView {
             let cell: DailyMealCell = dailyMealCollectionView.dequeueReusableCell(for: indexPath)
             cell.load(with: "")
+            // should add gesture recognizer which will recognize tapping on cell for a little bit more time than usual
             return cell
         } else {
             let cell: DailyMealCategoryCell = categoryCollectionView.dequeueReusableCell(for: indexPath)
             cell.load()
             return cell
         }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // should go in selected food detail page 
     }
 }
 
@@ -94,6 +99,7 @@ extension DailyMealMainViewController {
         subTitle.textColor = .darkBlue
         subTitle.translatesAutoresizingMaskIntoConstraints = false
         subTitle.text = "are you going to start cooking? you know someone have to cook and I guess you are the one who is willing to sucrifice"
+        subTitle.addSpacing()
         return subTitle
     }
     

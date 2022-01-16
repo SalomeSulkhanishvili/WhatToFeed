@@ -12,7 +12,8 @@ class DailyMealCell: UICollectionViewCell {
     @IBOutlet weak var mainView: UIView!
     @IBOutlet weak var mealImageView: UIImageView!
     @IBOutlet weak var mealTitleLabel: UILabel!
-    
+    @IBOutlet weak var ingredientStackView: UIStackView!
+    @IBOutlet weak var foodDescriptionLabel: UILabel!
     @IBOutlet weak var portionView: UIView!
     @IBOutlet weak var timeView: UIView!
     @IBOutlet weak var foodRecipeView: UIView!
@@ -33,6 +34,8 @@ class DailyMealCell: UICollectionViewCell {
                                 radius: 3,
                                 offset: CGSize(width: 2, height: 2))
         loadInfoViews()
+        mealTitleLabel.addSpacing()
+        foodDescriptionLabel.addSpacing()
     }
     
     private func loadInfoViews() {
