@@ -48,6 +48,8 @@
 		C3D0C688278B475000601A69 /* InfoLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0C687278B475000601A69 /* InfoLabelView.xib */; };
 		C3DBB9AE279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBB9AD279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift */; };
 		C3DBB9B22794699E0055A0E3 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBB9B12794699E0055A0E3 /* UIFont+Extension.swift */; };
+		C3DBB9B4279475F80055A0E3 /* NSAttributedString+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBB9B3279475F80055A0E3 /* NSAttributedString+Extension.swift */; };
+		C3DBB9B6279476330055A0E3 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBB9B5279476330055A0E3 /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +115,8 @@
 		C3D0C687278B475000601A69 /* InfoLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoLabelView.xib; sourceTree = "<group>"; };
 		C3DBB9AD279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "screenFactor_IBInspectable + UI Extensions.swift"; sourceTree = "<group>"; };
 		C3DBB9B12794699E0055A0E3 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
+		C3DBB9B3279475F80055A0E3 /* NSAttributedString+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Extension.swift"; sourceTree = "<group>"; };
+		C3DBB9B5279476330055A0E3 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,8 @@
 				C3551403278E161E003A5370 /* UIDevice+Extension.swift */,
 				C3551405278E2418003A5370 /* Int+Extension.swift */,
 				C3DBB9AD279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift */,
+				C3DBB9B3279475F80055A0E3 /* NSAttributedString+Extension.swift */,
+				C3DBB9B5279476330055A0E3 /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -519,6 +525,8 @@
 				C3DBB9AE279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift in Sources */,
 				C30C954C2785D8E700F6DCA2 /* NSObject+Extension.swift in Sources */,
 				C3AD148F2784372900CD090D /* AppDelegate.swift in Sources */,
+				C3DBB9B6279476330055A0E3 /* String+Extension.swift in Sources */,
+				C3DBB9B4279475F80055A0E3 /* NSAttributedString+Extension.swift in Sources */,
 				C3551406278E2418003A5370 /* Int+Extension.swift in Sources */,
 				C3AD14C22784478D00CD090D /* TabBarController.swift in Sources */,
 				C31FDEB1278715C200E54AB0 /* UIImage+Extension.swift in Sources */,

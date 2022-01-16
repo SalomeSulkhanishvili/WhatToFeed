@@ -14,7 +14,6 @@ class DailyMealMainViewController: TabBarMainController {
     private lazy var greetingTitleLabel: UILabel = { loadGreetingTitleLabel() }()
     private lazy var subTitleLabel: UILabel = { loadSubTitleLabel() }()
     
-    private let dailyMealCellHeight: CGFloat = 400 * UIDevice.screenFactor
     private let categoryCellHeight: CGFloat = 40 * UIDevice.screenFactor
     
     override func viewDidLoad() {
@@ -81,8 +80,10 @@ extension DailyMealMainViewController {
         let title = UILabel()
         title.numberOfLines = 1
         title.font = UIFont.aleo(type: .bold, size: 13)
-        title.text = "Hello Max charles"
         title.translatesAutoresizingMaskIntoConstraints = false
+        title.attributedText = NSAttributedString.customText(with: ["Hello".customString(with: .mainPurple),
+                                                                    "Max charles".customString(with: .mainOrange)],
+                                                             font: UIFont.aleo(type: .bold, size: 13))
         return title
     }
     
@@ -91,8 +92,8 @@ extension DailyMealMainViewController {
         subTitle.numberOfLines = 0
         subTitle.font = UIFont.aleo(type: .bold, size: 13)
         subTitle.textColor = .darkBlue
-        subTitle.text = "are you going to start cooking? you know someone have to cook and I guess you are the one who is willing to sucrifice"
         subTitle.translatesAutoresizingMaskIntoConstraints = false
+        subTitle.text = "are you going to start cooking? you know someone have to cook and I guess you are the one who is willing to sucrifice"
         return subTitle
     }
     
@@ -163,7 +164,8 @@ extension DailyMealMainViewController {
                                                          constant: 5 * UIDevice.screenFactor),
             dailyMealCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             dailyMealCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            dailyMealCollectionView.bottomAnchor.constraint(equalTo: categoryCollectionView.topAnchor, constant: -10)
+            dailyMealCollectionView.bottomAnchor.constraint(equalTo: categoryCollectionView.topAnchor,
+                                                            constant: -10 * UIDevice.screenFactor)
         ])
         
         dailyMealCollectionView.reloadData()
