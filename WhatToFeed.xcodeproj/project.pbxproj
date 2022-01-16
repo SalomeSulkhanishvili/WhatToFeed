@@ -46,6 +46,8 @@
 		C3D0C683278B458C00601A69 /* UICollectionVIew+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */; };
 		C3D0C686278B474500601A69 /* InfoLabelVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C685278B474500601A69 /* InfoLabelVIew.swift */; };
 		C3D0C688278B475000601A69 /* InfoLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0C687278B475000601A69 /* InfoLabelView.xib */; };
+		C3DBB9AE279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBB9AD279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift */; };
+		C3DBB9B22794699E0055A0E3 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DBB9B12794699E0055A0E3 /* UIFont+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionVIew+Extension.swift"; sourceTree = "<group>"; };
 		C3D0C685278B474500601A69 /* InfoLabelVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoLabelVIew.swift; sourceTree = "<group>"; };
 		C3D0C687278B475000601A69 /* InfoLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoLabelView.xib; sourceTree = "<group>"; };
+		C3DBB9AD279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "screenFactor_IBInspectable + UI Extensions.swift"; sourceTree = "<group>"; };
+		C3DBB9B12794699E0055A0E3 /* UIFont+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +161,7 @@
 		C30C953A2785C57C00F6DCA2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				C3DBB9B12794699E0055A0E3 /* UIFont+Extension.swift */,
 				C30C95492785D1D000F6DCA2 /* UIViewController+Extension.swift */,
 				C30C954B2785D8E700F6DCA2 /* NSObject+Extension.swift */,
 				C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */,
@@ -165,6 +170,7 @@
 				C3D0C682278B458C00601A69 /* UICollectionVIew+Extension.swift */,
 				C3551403278E161E003A5370 /* UIDevice+Extension.swift */,
 				C3551405278E2418003A5370 /* Int+Extension.swift */,
+				C3DBB9AD279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -503,12 +509,14 @@
 				C31FDEB327871DB900E54AB0 /* EmptyFlowItem.swift in Sources */,
 				C30C95372785C45F00F6DCA2 /* CurrentProductsListMainViewController.swift in Sources */,
 				C3D0C683278B458C00601A69 /* UICollectionVIew+Extension.swift in Sources */,
+				C3DBB9B22794699E0055A0E3 /* UIFont+Extension.swift in Sources */,
 				C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */,
 				C3D0C686278B474500601A69 /* InfoLabelVIew.swift in Sources */,
 				C30C953227858C8900F6DCA2 /* DailyMealMainViewController.swift in Sources */,
 				C30C95442785C98700F6DCA2 /* StatisticsMainViewController.swift in Sources */,
 				C3D0C67F278A152900601A69 /* DailyMealCell.swift in Sources */,
 				C31FDEAF278709BC00E54AB0 /* UIView+Extension.swift in Sources */,
+				C3DBB9AE279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift in Sources */,
 				C30C954C2785D8E700F6DCA2 /* NSObject+Extension.swift in Sources */,
 				C3AD148F2784372900CD090D /* AppDelegate.swift in Sources */,
 				C3551406278E2418003A5370 /* Int+Extension.swift in Sources */,

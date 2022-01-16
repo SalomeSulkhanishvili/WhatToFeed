@@ -16,4 +16,5 @@ extension UIColor {
     static let statusBarLightGray = UIColor(hexValue: 0xF2F2F2)
     static let lightBlueActionButton = UIColor(hexValue: 0x53A4EE)
     static let lightPurpleActionButton = UIColor(hexValue: 0x6150CB)
+    static let darkBlue = UIColor(hexValue: 0x2F3592)
 }

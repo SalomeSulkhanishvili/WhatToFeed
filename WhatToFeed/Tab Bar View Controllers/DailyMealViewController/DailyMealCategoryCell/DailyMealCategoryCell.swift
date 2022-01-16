@@ -15,5 +15,9 @@ class DailyMealCategoryCell: UICollectionViewCell {
         self.backgroundColor = .lightBlueActionButton
         self.layer.cornerRadius = 10
     }
+    
+    func load() {
+        // load
+    }
 
 }

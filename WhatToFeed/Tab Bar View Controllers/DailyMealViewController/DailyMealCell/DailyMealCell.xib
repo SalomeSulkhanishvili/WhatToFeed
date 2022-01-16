@@ -30,26 +30,37 @@
                         <rect key="frame" x="5" y="5" width="220" height="390"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="meal_default_image" translatesAutoresizingMaskIntoConstraints="NO" id="qNh-vj-UO6">
-                                <rect key="frame" x="0.0" y="0.0" width="220" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="220" height="185"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="367-NY-wKe"/>
+                                    <constraint firstAttribute="width" secondItem="qNh-vj-UO6" secondAttribute="height" multiplier="25:21" id="2dv-ET-LNd">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Product Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QMx-43-50o">
-                                <rect key="frame" x="7" y="205" width="206" height="13"/>
+                                <rect key="frame" x="7" y="190" width="206" height="13"/>
                                 <fontDescription key="fontDescription" name="Aleo-Bold" family="Aleo" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustFontSizeToFitDevice" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1YH-EE-wED">
-                                <rect key="frame" x="7" y="228" width="206" height="151"/>
+                                <rect key="frame" x="7" y="213" width="206" height="166"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZOb-xZ-Nru" userLabel="lineView">
                                         <rect key="frame" x="0.0" y="24" width="206" height="1"/>
                                         <color key="backgroundColor" red="0.71372549019607845" green="0.71372549019607845" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1" id="maO-4S-aFi"/>
+                                            <constraint firstAttribute="height" constant="1" id="maO-4S-aFi">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="f18-u6-7Ud">
@@ -59,14 +70,22 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="75" height="15"/>
                                                 <color key="backgroundColor" white="0.87064394170000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="75" id="IA6-Zs-ksO"/>
+                                                    <constraint firstAttribute="width" constant="75" id="IA6-Zs-ksO">
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </constraint>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qW9-tB-06P">
                                                 <rect key="frame" x="96" y="0.0" width="75" height="15"/>
                                                 <color key="backgroundColor" white="0.87064394170000003" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="75" id="pgh-Zx-C0k"/>
+                                                    <constraint firstAttribute="width" constant="75" id="pgh-Zx-C0k">
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </constraint>
                                                 </constraints>
                                             </view>
                                         </subviews>
@@ -78,7 +97,11 @@
                                         <rect key="frame" x="0.0" y="30" width="206" height="15"/>
                                         <color key="backgroundColor" white="0.87064394165869474" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="15" id="G2P-Dg-ygV"/>
+                                            <constraint firstAttribute="height" constant="15" id="G2P-Dg-ygV">
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </constraint>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bla bla here will be description of the whole process that is needed in order to cook this food. " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fEz-5Y-KVe">
@@ -95,24 +118,36 @@
                                                 <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustFontSizeToFitDevice" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. second product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KFY-VX-t4m">
                                                 <rect key="frame" x="0.0" y="15" width="78.5" height="10"/>
                                                 <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustFontSizeToFitDevice" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. third product" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JIc-R3-Ftb">
                                                 <rect key="frame" x="0.0" y="30" width="70" height="10"/>
                                                 <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustFontSizeToFitDevice" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=". . . . . ." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTM-Uv-B7b">
                                                 <rect key="frame" x="0.0" y="45" width="23.5" height="10"/>
                                                 <fontDescription key="fontDescription" name="Aleo-Regular" family="Aleo" pointSize="10"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustFontSizeToFitDevice" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                             </label>
                                         </subviews>
                                     </stackView>
@@ -120,35 +155,83 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="exX-Pe-mMS" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" id="3wf-0A-Gsm"/>
-                                    <constraint firstItem="exX-Pe-mMS" firstAttribute="bottom" secondItem="P0i-gY-z5O" secondAttribute="top" constant="-10" id="7g4-kz-K58"/>
-                                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="fEz-5Y-KVe" secondAttribute="bottom" id="9Ts-Pf-aEz"/>
+                                    <constraint firstItem="exX-Pe-mMS" firstAttribute="bottom" secondItem="P0i-gY-z5O" secondAttribute="top" constant="-10" id="7g4-kz-K58">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstItem="fEz-5Y-KVe" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="1YH-EE-wED" secondAttribute="bottom" id="9Ts-Pf-aEz"/>
                                     <constraint firstAttribute="trailing" secondItem="ZOb-xZ-Nru" secondAttribute="trailing" id="AEB-a4-4ko"/>
                                     <constraint firstItem="fEz-5Y-KVe" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" id="B3t-y9-RGN"/>
-                                    <constraint firstItem="P0i-gY-z5O" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" constant="3" id="DYK-Zv-iUo"/>
+                                    <constraint firstItem="P0i-gY-z5O" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" constant="3" id="DYK-Zv-iUo">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                     <constraint firstItem="f18-u6-7Ud" firstAttribute="top" secondItem="1YH-EE-wED" secondAttribute="top" id="Fo6-6O-m6r"/>
-                                    <constraint firstItem="exX-Pe-mMS" firstAttribute="top" secondItem="ZOb-xZ-Nru" secondAttribute="bottom" constant="5" id="Gse-k0-4no"/>
-                                    <constraint firstItem="f18-u6-7Ud" firstAttribute="bottom" secondItem="ZOb-xZ-Nru" secondAttribute="top" constant="-9" id="Hqw-5S-x3k"/>
+                                    <constraint firstItem="exX-Pe-mMS" firstAttribute="top" secondItem="ZOb-xZ-Nru" secondAttribute="bottom" constant="5" id="Gse-k0-4no">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
+                                    <constraint firstItem="f18-u6-7Ud" firstAttribute="bottom" secondItem="ZOb-xZ-Nru" secondAttribute="top" constant="-9" id="Hqw-5S-x3k">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                     <constraint firstItem="f18-u6-7Ud" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" id="Ld7-Cj-met"/>
                                     <constraint firstAttribute="trailing" secondItem="exX-Pe-mMS" secondAttribute="trailing" id="Lt2-oJ-ReM"/>
                                     <constraint firstAttribute="trailing" secondItem="P0i-gY-z5O" secondAttribute="trailing" id="V5r-UO-zw3"/>
                                     <constraint firstItem="ZOb-xZ-Nru" firstAttribute="leading" secondItem="1YH-EE-wED" secondAttribute="leading" id="fvH-nc-o4I"/>
-                                    <constraint firstItem="fEz-5Y-KVe" firstAttribute="top" secondItem="P0i-gY-z5O" secondAttribute="bottom" constant="10" id="nks-3H-UqK"/>
+                                    <constraint firstItem="fEz-5Y-KVe" firstAttribute="top" secondItem="P0i-gY-z5O" secondAttribute="bottom" constant="10" id="nks-3H-UqK">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </constraint>
                                     <constraint firstAttribute="trailing" secondItem="fEz-5Y-KVe" secondAttribute="trailing" id="zQn-TX-ZBo"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1YH-EE-wED" firstAttribute="leading" secondItem="SeM-ve-Vht" secondAttribute="leading" constant="7" id="62M-KU-3QL"/>
-                            <constraint firstItem="1YH-EE-wED" firstAttribute="top" secondItem="QMx-43-50o" secondAttribute="bottom" constant="10" id="Far-yt-CPh"/>
-                            <constraint firstItem="1YH-EE-wED" firstAttribute="trailing" secondItem="SeM-ve-Vht" secondAttribute="trailing" constant="-7" id="MfA-00-o4S"/>
+                            <constraint firstItem="1YH-EE-wED" firstAttribute="leading" secondItem="SeM-ve-Vht" secondAttribute="leading" constant="7" id="62M-KU-3QL">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="1YH-EE-wED" firstAttribute="top" secondItem="QMx-43-50o" secondAttribute="bottom" constant="10" id="Far-yt-CPh">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="1YH-EE-wED" firstAttribute="trailing" secondItem="SeM-ve-Vht" secondAttribute="trailing" constant="-7" id="MfA-00-o4S">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                             <constraint firstItem="qNh-vj-UO6" firstAttribute="top" secondItem="SeM-ve-Vht" secondAttribute="top" id="OXw-Oq-Sak"/>
                             <constraint firstItem="qNh-vj-UO6" firstAttribute="trailing" secondItem="SeM-ve-Vht" secondAttribute="trailing" id="YJA-i5-lZb"/>
-                            <constraint firstItem="1YH-EE-wED" firstAttribute="bottom" secondItem="SeM-ve-Vht" secondAttribute="bottom" constant="-11" id="ZRA-nX-hXY"/>
-                            <constraint firstItem="QMx-43-50o" firstAttribute="trailing" secondItem="SeM-ve-Vht" secondAttribute="trailing" constant="-7" id="dD2-jy-sJx"/>
+                            <constraint firstItem="1YH-EE-wED" firstAttribute="bottom" secondItem="SeM-ve-Vht" secondAttribute="bottom" constant="-11" id="ZRA-nX-hXY">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="QMx-43-50o" firstAttribute="trailing" secondItem="SeM-ve-Vht" secondAttribute="trailing" constant="-7" id="dD2-jy-sJx">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                             <constraint firstItem="qNh-vj-UO6" firstAttribute="leading" secondItem="SeM-ve-Vht" secondAttribute="leading" id="fhb-ho-Qho"/>
-                            <constraint firstItem="QMx-43-50o" firstAttribute="leading" secondItem="SeM-ve-Vht" secondAttribute="leading" constant="7" id="sXB-Dc-5uW"/>
-                            <constraint firstItem="QMx-43-50o" firstAttribute="top" secondItem="qNh-vj-UO6" secondAttribute="bottom" constant="5" id="tkV-RX-Ukd"/>
+                            <constraint firstItem="QMx-43-50o" firstAttribute="leading" secondItem="SeM-ve-Vht" secondAttribute="leading" constant="7" id="sXB-Dc-5uW">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
+                            <constraint firstItem="QMx-43-50o" firstAttribute="top" secondItem="qNh-vj-UO6" secondAttribute="bottom" constant="5" id="tkV-RX-Ukd">
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </constraint>
                         </constraints>
                     </view>
                 </subviews>
@@ -156,17 +239,34 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="SeM-ve-Vht" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailing" constant="-5" id="5qc-r8-BrX"/>
-                <constraint firstItem="SeM-ve-Vht" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="MVq-G3-8ml"/>
-                <constraint firstItem="SeM-ve-Vht" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottom" constant="-5" id="YUn-kC-IaM"/>
-                <constraint firstItem="SeM-ve-Vht" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="hpO-7H-FnW"/>
+                <constraint firstItem="SeM-ve-Vht" firstAttribute="trailing" secondItem="gTV-IL-0wX" secondAttribute="trailing" constant="-5" id="5qc-r8-BrX">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="SeM-ve-Vht" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="MVq-G3-8ml">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="SeM-ve-Vht" firstAttribute="bottom" secondItem="gTV-IL-0wX" secondAttribute="bottom" constant="-5" id="YUn-kC-IaM">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
+                <constraint firstItem="SeM-ve-Vht" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="hpO-7H-FnW">
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="shouldAdjustConstantToFitDevice" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </constraint>
             </constraints>
+            <size key="customSize" width="230" height="398"/>
             <connections>
                 <outlet property="mainView" destination="SeM-ve-Vht" id="WLm-cS-cae"/>
                 <outlet property="mealImageView" destination="qNh-vj-UO6" id="65U-H9-XuK"/>
                 <outlet property="mealTitleLabel" destination="QMx-43-50o" id="Syb-TE-QLM"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="103.79464285714285"/>
+            <point key="canvasLocation" x="137.68115942028987" y="103.125"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -45,7 +45,7 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == dailyMealCollectionView {
-            let height = collectionView.frame.height - 30
+            let height = collectionView.frame.height - 20
             let width = height * 0.575 // 230 : 400
             return CGSize(width: width, height: height)
         } else {
@@ -69,6 +69,7 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
             return cell
         } else {
             let cell: DailyMealCategoryCell = categoryCollectionView.dequeueReusableCell(for: indexPath)
+            cell.load()
             return cell
         }
     }
@@ -79,7 +80,7 @@ extension DailyMealMainViewController {
     private func loadGreetingTitleLabel() -> UILabel {
         let title = UILabel()
         title.numberOfLines = 1
-        title.font = UIFont(name: "Aleo-Bold", size: 13)
+        title.font = UIFont.aleo(type: .bold, size: 13)
         title.text = "Hello Max charles"
         title.translatesAutoresizingMaskIntoConstraints = false
         return title
@@ -88,7 +89,8 @@ extension DailyMealMainViewController {
     private func loadSubTitleLabel() -> UILabel {
         let subTitle = UILabel()
         subTitle.numberOfLines = 0
-        subTitle.font = UIFont(name: "Aleo-Bold", size: 13)
+        subTitle.font = UIFont.aleo(type: .bold, size: 13)
+        subTitle.textColor = .darkBlue
         subTitle.text = "are you going to start cooking? you know someone have to cook and I guess you are the one who is willing to sucrifice"
         subTitle.translatesAutoresizingMaskIntoConstraints = false
         return subTitle
