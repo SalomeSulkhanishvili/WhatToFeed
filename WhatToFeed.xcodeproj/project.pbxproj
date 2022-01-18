@@ -40,6 +40,7 @@
 		C3AD14B02784372F00CD090D /* WhatToFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14AF2784372F00CD090D /* WhatToFeedUITests.swift */; };
 		C3AD14B22784372F00CD090D /* WhatToFeedUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14B12784372F00CD090D /* WhatToFeedUITestsLaunchTests.swift */; };
 		C3AD14C22784478D00CD090D /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AD14C12784478D00CD090D /* TabBarController.swift */; };
+		C3C24B61279749B1008492C3 /* DailyMealMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C24B60279749B1008492C3 /* DailyMealMainViewModel.swift */; };
 		C3CB722E27887320001229BD /* TabBarMainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CB722D27887320001229BD /* TabBarMainController.swift */; };
 		C3D0C67F278A152900601A69 /* DailyMealCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D0C67D278A152900601A69 /* DailyMealCell.swift */; };
 		C3D0C680278A152900601A69 /* DailyMealCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3D0C67E278A152900601A69 /* DailyMealCell.xib */; };
@@ -108,6 +109,7 @@
 		C3AD14AF2784372F00CD090D /* WhatToFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToFeedUITests.swift; sourceTree = "<group>"; };
 		C3AD14B12784372F00CD090D /* WhatToFeedUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatToFeedUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C3AD14C12784478D00CD090D /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C3C24B60279749B1008492C3 /* DailyMealMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealMainViewModel.swift; sourceTree = "<group>"; };
 		C3CB722D27887320001229BD /* TabBarMainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarMainController.swift; sourceTree = "<group>"; };
 		C3D0C67D278A152900601A69 /* DailyMealCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealCell.swift; sourceTree = "<group>"; };
 		C3D0C67E278A152900601A69 /* DailyMealCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyMealCell.xib; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		C30C953027858C5400F6DCA2 /* DailyMealViewController */ = {
 			isa = PBXGroup;
 			children = (
+				C3C24B62279749B8008492C3 /* View Model */,
 				C30C953127858C8900F6DCA2 /* DailyMealMainViewController.swift */,
 				C3D0C681278A1CB600601A69 /* DailyMealCell */,
 				C35513FC278DEEE5003A5370 /* DailyMealCategoryCell */,
@@ -350,6 +353,14 @@
 			path = "Tab Bar View Controllers";
 			sourceTree = "<group>";
 		};
+		C3C24B62279749B8008492C3 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				C3C24B60279749B1008492C3 /* DailyMealMainViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
 		C3D0C681278A1CB600601A69 /* DailyMealCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -521,6 +532,7 @@
 				C3D0C683278B458C00601A69 /* UICollectionVIew+Extension.swift in Sources */,
 				C3DBB9B22794699E0055A0E3 /* UIFont+Extension.swift in Sources */,
 				C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */,
+				C3C24B61279749B1008492C3 /* DailyMealMainViewModel.swift in Sources */,
 				C3D0C686278B474500601A69 /* InfoLabelView.swift in Sources */,
 				C30C953227858C8900F6DCA2 /* DailyMealMainViewController.swift in Sources */,
 				C30C95442785C98700F6DCA2 /* StatisticsMainViewController.swift in Sources */,

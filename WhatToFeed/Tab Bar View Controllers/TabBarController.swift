@@ -27,7 +27,7 @@ class TabBarController: UITabBarController {
     }
     
     private func setUpTabBarControllers() {
-        if let dailyMeal = getController(with: DailyMealMainViewController.load(),
+        if let dailyMeal = getController(with: DailyMealMainViewController.load(with: DailyMealMainViewModel()), // should change
                                          type: .DailyMeal),
            let curretProductsList = getController(with: CurrentProductsListMainViewController.load(),
                                                   type: .CurrentProductsList),

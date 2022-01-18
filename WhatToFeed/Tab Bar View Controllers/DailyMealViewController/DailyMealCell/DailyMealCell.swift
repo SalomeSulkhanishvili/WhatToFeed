@@ -9,14 +9,14 @@ import UIKit
 
 class DailyMealCell: UICollectionViewCell {
 
-    @IBOutlet weak var mainView: UIView!
-    @IBOutlet weak var mealImageView: UIImageView!
-    @IBOutlet weak var mealTitleLabel: UILabel!
-    @IBOutlet weak var ingredientStackView: UIStackView!
-    @IBOutlet weak var foodDescriptionLabel: UILabel!
-    @IBOutlet weak var portionView: UIView!
-    @IBOutlet weak var timeView: UIView!
-    @IBOutlet weak var foodRecipeView: UIView!
+    @IBOutlet private weak var mainView: UIView!
+    @IBOutlet private weak var mealImageView: UIImageView!
+    @IBOutlet private weak var mealTitleLabel: UILabel!
+    @IBOutlet private weak var ingredientStackView: UIStackView!
+    @IBOutlet private weak var foodDescriptionLabel: UILabel!
+    @IBOutlet private weak var portionView: UIView!
+    @IBOutlet private weak var timeView: UIView!
+    @IBOutlet private weak var foodRecipeView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -41,6 +41,9 @@
                 <constraint firstItem="HCs-lS-TQT" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="ncb-Dj-EBm"/>
             </constraints>
             <size key="customSize" width="237" height="51"/>
+            <connections>
+                <outlet property="categoryNameLabel" destination="HCs-lS-TQT" id="aJO-sv-XVv"/>
+            </connections>
             <point key="canvasLocation" x="273.1884057971015" y="104.12946428571428"/>
         </collectionViewCell>
     </objects>
