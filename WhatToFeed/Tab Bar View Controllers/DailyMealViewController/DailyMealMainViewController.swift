@@ -15,6 +15,7 @@ class DailyMealMainViewController: TabBarMainController {
     private lazy var subTitleLabel: UILabel = { loadSubTitleLabel() }()
     
     private let categoryCellHeight: CGFloat = 40 * UIDevice.screenFactor
+    private var viewModel: DailyMealMainViewModelType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,8 +26,9 @@ class DailyMealMainViewController: TabBarMainController {
         // loadController(GeneralMealsAndProductsViewController.load())
     }
     
-    static func load() -> DailyMealMainViewController {
+    static func load(with viewModel: DailyMealMainViewModelType?) -> DailyMealMainViewController {
         let viewController = DailyMealMainViewController(type: .DailyMeal)
+        viewController.viewModel = viewModel
         return viewController
     }
     
@@ -56,8 +58,10 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.dailyMealCollectionView {
             return 5 // just for testing purpose
+        } else if collectionView == self.categoryCollectionView {
+            return (viewModel?.outputs.categories?.count ?? 0)
         } else {
-            return 10
+            return 0
         }
     }
     
@@ -69,7 +73,9 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
             return cell
         } else {
             let cell: DailyMealCategoryCell = categoryCollectionView.dequeueReusableCell(for: indexPath)
-            cell.load()
+            if let categoryName = viewModel?.outputs.categories?[indexPath.row] {
+                cell.load(with: categoryName)
+            }
             return cell
         }
     }
