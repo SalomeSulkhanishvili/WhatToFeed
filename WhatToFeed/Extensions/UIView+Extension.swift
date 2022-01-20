@@ -70,11 +70,58 @@ extension UIView {
 
 // MARK: - shadows
 extension UIView {
+    enum LayersName: String {
+        case shadow = "shadow"
+        case highlighter = "highlighter"
+        
+    }
+    func removeLayer(of type: LayersName) {
+        guard let layers = self.layer.sublayers else { return }
+        for layer in layers {
+            if let name = layer.name, name == type.rawValue {
+                layer.removeFromSuperlayer()
+            }
+        }
+    }
+    
     func addShadow(of color: UIColor, radius: CGFloat, offset: CGSize = .zero, opacity: Float = 1) {
         self.layer.masksToBounds = false
         self.layer.shadowColor = color.cgColor
         self.layer.shadowRadius = radius
         self.layer.shadowOpacity = opacity
         self.layer.shadowOffset = offset
+        self.layer.name = LayersName.shadow.rawValue
     }
 }
+
+extension UIView {
+    func highlight(for view: UIView) {
+        self.highlight(x: view.frame.origin.x,
+                  y: view.frame.origin.y,
+                  width: view.bounds.width,
+                height: view.bounds.height,
+                  radius: view.layer.cornerRadius)
+    }
+    
+    func highlight(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, radius: CGFloat) {
+        self.removeLayer(of: .highlighter)
+        let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height), cornerRadius: 0)
+        let circlePath = UIBezierPath(roundedRect: CGRect(x: x,
+                                                          y: y,
+                                                          width: width,
+                                                          height: height),
+                                      cornerRadius: radius)
+        path.append(circlePath)
+        path.usesEvenOddFillRule = true
+
+        let fillLayer = CAShapeLayer()
+        fillLayer.path = path.cgPath
+        fillLayer.fillRule = .evenOdd
+        fillLayer.fillColor = UIColor.black.cgColor// view.backgroundColor?.cgColor
+        fillLayer.opacity = 0.7
+        fillLayer.name = LayersName.highlighter.rawValue
+        layer.addSublayer(fillLayer)
+        
+    }
+}
+

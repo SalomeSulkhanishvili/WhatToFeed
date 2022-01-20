@@ -14,7 +14,18 @@ class DailyMealMainViewController: TabBarMainController {
     private lazy var greetingTitleLabel: UILabel = { loadGreetingTitleLabel() }()
     private lazy var subTitleLabel: UILabel = { loadSubTitleLabel() }()
     
-    private let categoryCellHeight: CGFloat = 40 * UIDevice.screenFactor
+    private var categoryCellSize: CGSize {
+        let height = 40 * UIDevice.screenFactor
+        let width = height * (10/4) // 100 : 40
+        return CGSize(width: width, height: height)
+    }
+    
+    private var dailyMealCellSize: CGSize {
+        let height = dailyMealCollectionView.frame.height - 20
+        let width = height * 0.575 // 230 : 400
+        return CGSize(width: width, height: height)
+    }
+
     private var viewModel: DailyMealMainViewModelType?
     
     override func viewDidLoad() {
@@ -46,18 +57,15 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         if collectionView == dailyMealCollectionView {
-            let height = collectionView.frame.height - 20
-            let width = height * 0.575 // 230 : 400
-            return CGSize(width: width, height: height)
+            return dailyMealCellSize
         } else {
-            let width = categoryCellHeight * (10/4) // 100 : 40
-            return CGSize(width: width, height: categoryCellHeight)
+            return categoryCellSize
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.dailyMealCollectionView {
-            return 5 // just for testing purpose
+            return (viewModel?.outputs.dailyMeals.count ?? 0) // just for testing purpose
         } else if collectionView == self.categoryCollectionView {
             return (viewModel?.outputs.categories?.count ?? 0)
         } else {
@@ -68,8 +76,14 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.dailyMealCollectionView {
             let cell: DailyMealCell = dailyMealCollectionView.dequeueReusableCell(for: indexPath)
-            cell.load(with: "")
-            // should add gesture recognizer which will recognize tapping on cell for a little bit more time than usual
+            guard let item = viewModel?.outputs.dailyMeals[indexPath.row] else { return UICollectionViewCell() }
+            cell.load(with: item)
+            if (viewModel?.outputs.isCellSelected ?? false) && !item.isSelected {
+                cell.addShadow()
+            }
+            let press = UILongPressGestureRecognizer(target: self, action: #selector(cellPressed(_:)))
+            press.minimumPressDuration = 0.3
+            cell.addGestureRecognizer(press)
             return cell
         } else {
             let cell: DailyMealCategoryCell = categoryCollectionView.dequeueReusableCell(for: indexPath)
@@ -81,7 +95,42 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // should go in selected food detail page 
+        // show details of selected cell
+    }
+    
+    @objc func cellPressed(_ sender: UILongPressGestureRecognizer? = nil) {
+        if sender?.state == .ended {
+            guard let p = sender?.location(in: self.dailyMealCollectionView) else { return }
+            if let indexPath = self.dailyMealCollectionView.indexPathForItem(at: p) {
+                dailyMealCollectionView.scrollToItem(at: indexPath, at: .left, animated: true)
+                if let _ = self.dailyMealCollectionView.cellForItem(at: indexPath) {
+                    changeDailyMealSelection(for: indexPath)
+                }
+            }
+        }
+    }
+    
+    private func changeDailyMealSelection(for index: IndexPath) {
+        guard let viewModel = viewModel else { return }
+        let shouldSelect = !viewModel.outputs.dailyMeals[index.row].isSelected
+        viewModel.inputs.changeDailyMealSelection(with: shouldSelect ? index.row : nil)
+        dailyMealCollectionView.isScrollEnabled = !shouldSelect
+        categoryCollectionView.isScrollEnabled = !shouldSelect
+        
+        if shouldSelect {
+            dailyMealCollectionView.backgroundColor = .black.withAlphaComponent(0.7)
+            self.contentView.highlight(for: self.dailyMealCollectionView)
+            showOptionsView()
+        } else {
+            // rmeove options View
+            self.contentView.removeLayer(of: .highlighter)
+            dailyMealCollectionView.backgroundColor = .white
+        }
+        dailyMealCollectionView.reloadData()
+    }
+    
+    private func showOptionsView() {
+        // add view that will contains options for cell
     }
 }
 
@@ -164,7 +213,7 @@ extension DailyMealMainViewController {
         ])
         
         NSLayoutConstraint.activate([
-            categoryCollectionView.heightAnchor.constraint(equalToConstant: categoryCellHeight + 10),
+            categoryCollectionView.heightAnchor.constraint(equalToConstant: categoryCellSize.height + 10),
             categoryCollectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             categoryCollectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             categoryCollectionView.bottomAnchor.constraint(equalTo: contentView.safeBottomAnchor,
