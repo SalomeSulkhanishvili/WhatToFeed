@@ -17,6 +17,7 @@ class DailyMealCell: UICollectionViewCell {
     @IBOutlet private weak var portionView: UIView!
     @IBOutlet private weak var timeView: UIView!
     @IBOutlet private weak var foodRecipeView: UIView!
+    private var transparentView = UIView()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,18 +25,36 @@ class DailyMealCell: UICollectionViewCell {
         [portionView,timeView,foodRecipeView].forEach({
             $0?.backgroundColor = .clear
         })
-        
     }
     
-    func load(with: String) {
+    func load(with item: DailyMeal?) {
         self.mainView.layer.cornerRadius = 20 * UIDevice.screenFactor
         mealImageView.layer.masksToBounds = true
+        self.backgroundColor = .clear
         self.mainView.addShadow(of: .lightGray,
                                 radius: 3,
                                 offset: CGSize(width: 2, height: 2))
         loadInfoViews()
         mealTitleLabel.addSpacing()
         foodDescriptionLabel.addSpacing()
+        if self.contentView.subviews.contains(transparentView) {
+            transparentView.removeFromSuperview()
+        }
+        
+    }
+    
+    func addShadow() {
+        self.contentView.addSubview(transparentView)
+        transparentView.backgroundColor = .black.withAlphaComponent(0.7)
+        transparentView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            transparentView.topAnchor.constraint(equalTo: self.contentView.topAnchor),
+            transparentView.leadingAnchor.constraint(equalTo: self.contentView.leadingAnchor),
+            transparentView.trailingAnchor.constraint(equalTo: self.contentView.trailingAnchor),
+            transparentView.bottomAnchor.constraint(equalTo: self.contentView.bottomAnchor)
+        ])
+        self.backgroundColor = .white
     }
     
     private func loadInfoViews() {
