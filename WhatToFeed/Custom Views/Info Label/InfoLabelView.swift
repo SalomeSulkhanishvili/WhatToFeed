@@ -23,6 +23,7 @@ class InfoLabelView: UIView {
         let infoLabelView = InfoLabelView.loadFromNib()
         infoLabelView.type = info
         infoLabelView.initialize(with: value)
+        infoLabelView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         return infoLabelView
     }
     

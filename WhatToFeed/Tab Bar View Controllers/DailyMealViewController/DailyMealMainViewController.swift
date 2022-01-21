@@ -122,6 +122,8 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
         dailyMealCollectionView.scrollToItem(at: index, at: .left, animated: true)
         dailyMealCollectionView.isScrollEnabled = !shouldSelect
         categoryCollectionView.isScrollEnabled = !shouldSelect
+        dailyMealOptionsView?.removeFromSuperview()
+        dailyMealOptionsView = nil
         
         if shouldSelect {
             dailyMealCollectionView.backgroundColor = .backgroundForHighlight
@@ -131,8 +133,6 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
             })
             
         } else {
-            dailyMealOptionsView?.removeFromSuperview()
-            dailyMealOptionsView = nil
             self.contentView.removeLayer(of: .highlighter)
             dailyMealCollectionView.backgroundColor = .white
         }
@@ -148,7 +148,7 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
         // when selecting first cell and scrollToItem that cell left selectedCellSize.origin.x is equal not correct
         // instead of 0 we sometimes get 270... or -270(in case i select cell from right which is not fully visible
         // temporary fix since this needs investigation
-        if selectedCellSize.origin.x < 50 && selectedCellSize.origin.x > 0 {
+        if selectedCellSize.origin.x < 100 && selectedCellSize.origin.x > 0 {
             x += selectedCellSize.origin.x
         }
         
