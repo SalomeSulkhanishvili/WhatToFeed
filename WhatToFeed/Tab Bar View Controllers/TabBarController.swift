@@ -49,6 +49,10 @@ class TabBarController: UITabBarController {
         navigationController.tabBarItem = tabBarItem
         return navigationController
     }
+    
+    deinit {
+        print("deinit - \(self.className)")
+    }
 }
 
 // MARK: - UITabBarControllerDelegate
