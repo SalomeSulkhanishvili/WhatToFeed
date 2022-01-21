@@ -60,6 +60,10 @@ class TabBarMainController: UIViewController, TabBarViewControllerProtocol {
     func loadController(_ viewController: UIViewController, animated: Bool = false) {
         self.navigationController?.pushViewController(viewController, animated: animated)
     }
+    
+    deinit {
+        print("deinit - \(self.className)")
+    }
 }
 
 protocol TabBarViewControllerProtocol: AnyObject {

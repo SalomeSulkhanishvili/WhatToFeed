@@ -14,6 +14,7 @@ class DailyMealMainViewController: TabBarMainController {
     private lazy var greetingTitleLabel: UILabel = { loadGreetingTitleLabel() }()
     private lazy var subTitleLabel: UILabel = { loadSubTitleLabel() }()
     private var dailyMealOptionsView: MealOptionView?
+    private var viewModel: DailyMealMainViewModelType?
     
     private var categoryCellSize: CGSize {
         let height = 40 * UIDevice.screenFactor
@@ -26,8 +27,6 @@ class DailyMealMainViewController: TabBarMainController {
         let width = height * 0.575 // 230 : 400
         return CGSize(width: width, height: height)
     }
-
-    private var viewModel: DailyMealMainViewModelType?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +49,10 @@ class DailyMealMainViewController: TabBarMainController {
         contentView.addSubview(greetingTitleLabel)
         contentView.addSubview(subTitleLabel)
         setCollectionViewConstraints()
+    }
+    
+    deinit {
+        print("deinit - \(self.className)")
     }
 }
 
@@ -105,7 +108,6 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
             if let indexPath = self.dailyMealCollectionView.indexPathForItem(at: p) {
                 if let cell = self.dailyMealCollectionView.cellForItem(at: indexPath) {
                     changeDailyMealSelection(for: cell, at: indexPath)
-                    print(indexPath.row)
                 }
             }
         }
@@ -154,9 +156,7 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
                                                             y: y,
                                                             width: 50 * UIDevice.screenFactor,
                                                             height: dailyMealCollectionView.bounds.height),
-                                         options: [DailyMealOptionItem(),
-                                                   DailyMealOptionItem(),
-                                                   DailyMealOptionItem()])
+                                              options: viewModel?.outputs.dailyMealOptions ?? [])
         guard let optionsView = self.dailyMealOptionsView else { return }
         self.contentView.addSubview(optionsView)
     }
@@ -169,9 +169,7 @@ extension DailyMealMainViewController {
         title.numberOfLines = 1
         title.font = UIFont.aleo(type: .bold, size: 13)
         title.translatesAutoresizingMaskIntoConstraints = false
-        title.attributedText = NSAttributedString.customText(with: ["Hello".customString(with: .mainPurple),
-                                                                    "Max charles".customString(with: .mainOrange)],
-                                                             font: UIFont.aleo(type: .bold, size: 13))
+        title.attributedText = viewModel?.outputs.title
         return title
     }
     
@@ -181,7 +179,7 @@ extension DailyMealMainViewController {
         subTitle.font = UIFont.aleo(type: .bold, size: 13)
         subTitle.textColor = .darkBlue
         subTitle.translatesAutoresizingMaskIntoConstraints = false
-        subTitle.text = "are you going to start cooking? you know someone have to cook and I guess you are the one who is willing to sucrifice"
+        subTitle.text = viewModel?.outputs.subTitle
         subTitle.addSpacing()
         return subTitle
     }

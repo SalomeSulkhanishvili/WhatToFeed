@@ -35,10 +35,7 @@ class MealOptionView: UIView {
         stackView?.translatesAutoresizingMaskIntoConstraints = false
         guard let stack = stackView else { return }
         self.addSubview(stack)
-        stack.addArrangedSubview(createOption(with: DailyMealOptionItem()))
-        stack.addArrangedSubview(createOption(with: DailyMealOptionItem()))
-        stack.addArrangedSubview(createOption(with: DailyMealOptionItem()))
-
+        options.forEach({ stack.addArrangedSubview(createOption(with: $0)) })
     }
     
     required init?(coder: NSCoder) {
@@ -56,9 +53,10 @@ class MealOptionView: UIView {
         button.backgroundColor = .white
         button.clipsToBounds = true
         button.layer.cornerRadius = sideSize / 2
-        button.setImage(.load(name: "no_image"), for: .normal)
+        button.setImage(.load(name: item.imageName), for: .normal)
+        button.imageView?.contentMode = .scaleToFill
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.imageEdgeInsets = UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+        button.addShadow(of: .black, radius: 7)
         button.addTarget(self, action: #selector(optionClicked(_:)), for: .touchUpInside)
         
         NSLayoutConstraint.activate([
@@ -78,7 +76,26 @@ class MealOptionView: UIView {
     
 }
 
+
+
 struct DailyMealOptionItem {
-    var name: String?
-    var imageName: String?
+    enum MealOption: String {
+        case done = "done"
+        case start = "start"
+        case description = "description"
+        case share = "share"
+        case settings = "settings"
+    }
+    var type: MealOption
+    
+    init(of type: MealOption) {
+        self.type = type
+    }
+    
+    var name: String {
+        return type.rawValue
+    }
+    var imageName: String {
+        return name + "MealOption_icon"
+    }
 }
