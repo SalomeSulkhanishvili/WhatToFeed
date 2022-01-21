@@ -21,4 +21,5 @@ extension UIColor {
     static let lightBlueActionButton = UIColor(hexValue: 0x53A4EE)
     static let lightPurpleActionButton = UIColor(hexValue: 0x6150CB)
     static let darkBlue = UIColor(hexValue: 0x2F3592)
+    static let backgroundForHighlight = UIColor.black.withAlphaComponent(0.7)
 }

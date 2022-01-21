@@ -45,7 +45,7 @@ class DailyMealCell: UICollectionViewCell {
     
     func addShadow() {
         self.contentView.addSubview(transparentView)
-        transparentView.backgroundColor = .black.withAlphaComponent(0.7)
+        transparentView.backgroundColor = .backgroundForHighlight
         transparentView.translatesAutoresizingMaskIntoConstraints = false
 
         NSLayoutConstraint.activate([

@@ -95,15 +95,16 @@ extension UIView {
 }
 
 extension UIView {
-    func highlight(for view: UIView) {
+    func highlight(for view: UIView, color: UIColor = .black) {
         self.highlight(x: view.frame.origin.x,
-                  y: view.frame.origin.y,
-                  width: view.bounds.width,
-                height: view.bounds.height,
-                  radius: view.layer.cornerRadius)
+                       y: view.frame.origin.y,
+                       width: view.bounds.width,
+                       height: view.bounds.height,
+                       radius: view.layer.cornerRadius,
+                       color: color)
     }
     
-    func highlight(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, radius: CGFloat) {
+    func highlight(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat, radius: CGFloat, color: UIColor) {
         self.removeLayer(of: .highlighter)
         let path = UIBezierPath(roundedRect: CGRect(x: 0, y: 0, width: self.bounds.size.width, height: self.bounds.size.height), cornerRadius: 0)
         let circlePath = UIBezierPath(roundedRect: CGRect(x: x,
@@ -117,8 +118,7 @@ extension UIView {
         let fillLayer = CAShapeLayer()
         fillLayer.path = path.cgPath
         fillLayer.fillRule = .evenOdd
-        fillLayer.fillColor = UIColor.black.cgColor// view.backgroundColor?.cgColor
-        fillLayer.opacity = 0.7
+        fillLayer.fillColor = color.cgColor// view.backgroundColor?.cgColor
         fillLayer.name = LayersName.highlighter.rawValue
         layer.addSublayer(fillLayer)
         

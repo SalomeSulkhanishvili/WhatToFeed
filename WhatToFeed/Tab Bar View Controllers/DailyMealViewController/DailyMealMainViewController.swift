@@ -13,6 +13,7 @@ class DailyMealMainViewController: TabBarMainController {
     private lazy var categoryCollectionView: UICollectionView = { loadCategoryCollectionView() }()
     private lazy var greetingTitleLabel: UILabel = { loadGreetingTitleLabel() }()
     private lazy var subTitleLabel: UILabel = { loadSubTitleLabel() }()
+    private var dailyMealOptionsView: MealOptionView?
     
     private var categoryCellSize: CGSize {
         let height = 40 * UIDevice.screenFactor
@@ -102,35 +103,62 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
         if sender?.state == .ended {
             guard let p = sender?.location(in: self.dailyMealCollectionView) else { return }
             if let indexPath = self.dailyMealCollectionView.indexPathForItem(at: p) {
-                dailyMealCollectionView.scrollToItem(at: indexPath, at: .left, animated: true)
-                if let _ = self.dailyMealCollectionView.cellForItem(at: indexPath) {
-                    changeDailyMealSelection(for: indexPath)
+                if let cell = self.dailyMealCollectionView.cellForItem(at: indexPath) {
+                    changeDailyMealSelection(for: cell, at: indexPath)
+                    print(indexPath.row)
                 }
             }
         }
     }
     
-    private func changeDailyMealSelection(for index: IndexPath) {
+    private func changeDailyMealSelection(for cell: UICollectionViewCell, at index: IndexPath) {
         guard let viewModel = viewModel else { return }
         let shouldSelect = !viewModel.outputs.dailyMeals[index.row].isSelected
         viewModel.inputs.changeDailyMealSelection(with: shouldSelect ? index.row : nil)
+        dailyMealCollectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0,
+                                                            right: shouldSelect ? 75 : 0)
+        dailyMealCollectionView.scrollToItem(at: index, at: .left, animated: true)
         dailyMealCollectionView.isScrollEnabled = !shouldSelect
         categoryCollectionView.isScrollEnabled = !shouldSelect
         
         if shouldSelect {
-            dailyMealCollectionView.backgroundColor = .black.withAlphaComponent(0.7)
-            self.contentView.highlight(for: self.dailyMealCollectionView)
-            showOptionsView()
+            dailyMealCollectionView.backgroundColor = .backgroundForHighlight
+            self.contentView.highlight(for: self.dailyMealCollectionView, color: .backgroundForHighlight)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: { [weak self] in
+                self?.showOptionsView(for: cell)
+            })
+            
         } else {
-            // rmeove options View
+            dailyMealOptionsView?.removeFromSuperview()
+            dailyMealOptionsView = nil
             self.contentView.removeLayer(of: .highlighter)
             dailyMealCollectionView.backgroundColor = .white
         }
         dailyMealCollectionView.reloadData()
     }
     
-    private func showOptionsView() {
-        // add view that will contains options for cell
+    private func showOptionsView(for cell: UICollectionViewCell) {
+        let selectedCellSize = dailyMealCollectionView.convert(cell.frame, to: self.contentView)
+        let y = selectedCellSize.origin.y + 15
+        var x = selectedCellSize.width + 15
+        
+        // TODO: there is one strange bug should investigate
+        // when selecting first cell and scrollToItem that cell left selectedCellSize.origin.x is equal not correct
+        // instead of 0 we sometimes get 270... or -270(in case i select cell from right which is not fully visible
+        // temporary fix since this needs investigation
+        if selectedCellSize.origin.x < 50 && selectedCellSize.origin.x > 0 {
+            x += selectedCellSize.origin.x
+        }
+        
+        dailyMealOptionsView = MealOptionView(frame: CGRect(x: x,
+                                                            y: y,
+                                                            width: 50 * UIDevice.screenFactor,
+                                                            height: dailyMealCollectionView.bounds.height),
+                                         options: [DailyMealOptionItem(),
+                                                   DailyMealOptionItem(),
+                                                   DailyMealOptionItem()])
+        guard let optionsView = self.dailyMealOptionsView else { return }
+        self.contentView.addSubview(optionsView)
     }
 }
 
