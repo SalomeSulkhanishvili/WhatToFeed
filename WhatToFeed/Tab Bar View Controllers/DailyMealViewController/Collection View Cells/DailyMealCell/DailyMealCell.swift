@@ -18,6 +18,7 @@ class DailyMealCell: UICollectionViewCell {
     @IBOutlet private weak var timeView: UIView!
     @IBOutlet private weak var foodRecipeView: UIView!
     private var transparentView = UIView()
+    private var dailyMealAddView: DailyMealAddView?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,23 +28,34 @@ class DailyMealCell: UICollectionViewCell {
         })
     }
     
-    func load(with item: DailyMeal?) {
-        self.mainView.layer.cornerRadius = 20 * UIDevice.screenFactor
-        mealImageView.layer.masksToBounds = true
-        self.backgroundColor = .clear
-        self.mainView.addShadow(of: .lightGray,
-                                radius: 3,
-                                offset: CGSize(width: 2, height: 2))
-        loadInfoViews()
-        mealTitleLabel.addSpacing()
-        foodDescriptionLabel.addSpacing()
+    func load(with item: DailyMeal? = nil, addShadow: Bool) {
+        dailyMealAddView?.removeFromSuperview()
+        
+        if let _ = item { // geenral daily Meal cell configuration
+            mainView.subviews.forEach({ $0.isHidden = false })
+            self.mainView.layer.cornerRadius = 20 * UIDevice.screenFactor
+            mealImageView.layer.masksToBounds = true
+            self.backgroundColor = .clear
+            self.mainView.addShadow(of: .lightGray,
+                                    radius: 3,
+                                    offset: CGSize(width: 2, height: 2))
+            loadInfoViews()
+            mealTitleLabel.addSpacing()
+            foodDescriptionLabel.addSpacing()
+        } else { // template for adding new meal
+            mainView.subviews.forEach({ $0.isHidden = true })
+            dailyMealAddView = DailyMealAddView(frame: self.mainView.bounds)
+            guard let addMealView = dailyMealAddView else { return }
+            mainView.addSubview(addMealView)
+        }
+        
         if self.contentView.subviews.contains(transparentView) {
             transparentView.removeFromSuperview()
         }
-        
+        if addShadow, !(item?.isSelected ?? false) { addShadowView() }
     }
     
-    func addShadow() {
+    func addShadowView() {
         self.contentView.addSubview(transparentView)
         transparentView.backgroundColor = .backgroundForHighlight
         transparentView.translatesAutoresizingMaskIntoConstraints = false

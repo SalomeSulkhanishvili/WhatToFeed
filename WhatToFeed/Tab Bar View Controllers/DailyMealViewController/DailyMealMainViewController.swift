@@ -7,6 +7,8 @@
 
 import UIKit
 
+//TODO: move collection views in seperate folder since this file class gets bigger and bigger
+
 class DailyMealMainViewController: TabBarMainController {
     
     private lazy var dailyMealCollectionView: UICollectionView = { loadDailyMealCollectionView() }()
@@ -69,7 +71,7 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView == self.dailyMealCollectionView {
-            return (viewModel?.outputs.dailyMeals.count ?? 0) // just for testing purpose
+            return (viewModel?.outputs.dailyMeals.count ?? 0) + 1// just for testing purpose
         } else if collectionView == self.categoryCollectionView {
             return (viewModel?.outputs.categories?.count ?? 0)
         } else {
@@ -80,11 +82,16 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.dailyMealCollectionView {
             let cell: DailyMealCell = dailyMealCollectionView.dequeueReusableCell(for: indexPath)
-            guard let item = viewModel?.outputs.dailyMeals[indexPath.row] else { return UICollectionViewCell() }
-            cell.load(with: item)
-            if (viewModel?.outputs.isCellSelected ?? false) && !item.isSelected {
-                cell.addShadow()
+            let isCellSelected = viewModel?.outputs.isCellSelected ?? false
+            // tempalte for daily Meal
+            if viewModel?.outputs.dailyMeals.count == indexPath.row {
+                cell.load(addShadow: isCellSelected)
+                return cell
             }
+            
+            // general dailyMeal cell
+            guard let item = viewModel?.outputs.dailyMeals[indexPath.row] else { return UICollectionViewCell() }
+            cell.load(with: item, addShadow: isCellSelected)
             let press = UILongPressGestureRecognizer(target: self, action: #selector(cellPressed(_:)))
             press.minimumPressDuration = 0.3
             cell.addGestureRecognizer(press)
@@ -99,7 +106,21 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // show details of selected cell
+        if collectionView == dailyMealCollectionView {
+            if indexPath.row == viewModel?.outputs.dailyMeals.count {
+                // add new meal
+                print("add new meal")
+            } else {
+                // go to selected meal
+                print("go to selected meal")
+            }
+        } else if collectionView == categoryCollectionView {
+            if indexPath.row == 0 { // add new category
+                print("add new category")
+            } else { // select category and based on that filter
+                print("select category and based on that filter")
+            }
+        }
     }
     
     @objc func cellPressed(_ sender: UILongPressGestureRecognizer? = nil) {
@@ -114,7 +135,7 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
     }
     
     private func changeDailyMealSelection(for cell: UICollectionViewCell, at index: IndexPath) {
-        guard let viewModel = viewModel else { return }
+        guard let viewModel = viewModel, index.row < viewModel.outputs.dailyMeals.count else { return }
         let shouldSelect = !viewModel.outputs.dailyMeals[index.row].isSelected
         viewModel.inputs.changeDailyMealSelection(with: shouldSelect ? index.row : nil)
         dailyMealCollectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0,
