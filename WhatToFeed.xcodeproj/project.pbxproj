@@ -15,6 +15,7 @@
 		C30C954C2785D8E700F6DCA2 /* NSObject+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C954B2785D8E700F6DCA2 /* NSObject+Extension.swift */; };
 		C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */; };
 		C30C9551278601F800F6DCA2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C9550278601F800F6DCA2 /* Colors.swift */; };
+		C3192556279EAFCC000E3B55 /* DailyMealAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3192555279EAFCC000E3B55 /* DailyMealAddView.swift */; };
 		C31FDE9B2786DA6A00E54AB0 /* EmptyFlowTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FDE9A2786DA6A00E54AB0 /* EmptyFlowTemplate.swift */; };
 		C31FDE9D2786DA7D00E54AB0 /* EmptyFlowTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31FDE9C2786DA7D00E54AB0 /* EmptyFlowTemplate.xib */; };
 		C31FDEA72786DDC400E54AB0 /* Aleo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31FDEA12786DDC300E54AB0 /* Aleo-Bold.ttf */; };
@@ -82,6 +83,7 @@
 		C30C954B2785D8E700F6DCA2 /* NSObject+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Extension.swift"; sourceTree = "<group>"; };
 		C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C30C9550278601F800F6DCA2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		C3192555279EAFCC000E3B55 /* DailyMealAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealAddView.swift; sourceTree = "<group>"; };
 		C31FDE9A2786DA6A00E54AB0 /* EmptyFlowTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFlowTemplate.swift; sourceTree = "<group>"; };
 		C31FDE9C2786DA7D00E54AB0 /* EmptyFlowTemplate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyFlowTemplate.xib; sourceTree = "<group>"; };
 		C31FDEA12786DDC300E54AB0 /* Aleo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aleo-Bold.ttf"; sourceTree = "<group>"; };
@@ -157,8 +159,8 @@
 			children = (
 				C3C24B62279749B8008492C3 /* View Model */,
 				C30C953127858C8900F6DCA2 /* DailyMealMainViewController.swift */,
-				C3D0C681278A1CB600601A69 /* DailyMealCell */,
-				C35513FC278DEEE5003A5370 /* DailyMealCategoryCell */,
+				C3192554279EAE7C000E3B55 /* Collection View Cells */,
+				C3EF6F30279AD3B600FE61BD /* Model */,
 				C3EF6F2B279AA05E00FE61BD /* MealOptionView */,
 			);
 			path = DailyMealViewController;
@@ -216,6 +218,23 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
+		C3192554279EAE7C000E3B55 /* Collection View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C3D0C681278A1CB600601A69 /* DailyMealCell */,
+				C35513FC278DEEE5003A5370 /* DailyMealCategoryCell */,
+			);
+			path = "Collection View Cells";
+			sourceTree = "<group>";
+		};
+		C3192557279EB730000E3B55 /* DailyMealAddView */ = {
+			isa = PBXGroup;
+			children = (
+				C3192555279EAFCC000E3B55 /* DailyMealAddView.swift */,
+			);
+			path = DailyMealAddView;
+			sourceTree = "<group>";
+		};
 		C31FDE9E2786DA8600E54AB0 /* EmptyFlowTemplate */ = {
 			isa = PBXGroup;
 			children = (
@@ -250,6 +269,7 @@
 		C31FDEAD2786E5C200E54AB0 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				C3192557279EB730000E3B55 /* DailyMealAddView */,
 				C3D0C684278B472C00601A69 /* Info Label */,
 				C31FDE9E2786DA8600E54AB0 /* EmptyFlowTemplate */,
 			);
@@ -369,7 +389,6 @@
 		C3D0C681278A1CB600601A69 /* DailyMealCell */ = {
 			isa = PBXGroup;
 			children = (
-				C3EF6F30279AD3B600FE61BD /* Model */,
 				C3D0C67D278A152900601A69 /* DailyMealCell.swift */,
 				C3D0C67E278A152900601A69 /* DailyMealCell.xib */,
 			);
@@ -564,6 +583,7 @@
 				C31FDEAF278709BC00E54AB0 /* UIView+Extension.swift in Sources */,
 				C3DBB9AE279464A60055A0E3 /* screenFactor_IBInspectable + UI Extensions.swift in Sources */,
 				C30C954C2785D8E700F6DCA2 /* NSObject+Extension.swift in Sources */,
+				C3192556279EAFCC000E3B55 /* DailyMealAddView.swift in Sources */,
 				C3AD148F2784372900CD090D /* AppDelegate.swift in Sources */,
 				C3DBB9B6279476330055A0E3 /* String+Extension.swift in Sources */,
 				C3DBB9B4279475F80055A0E3 /* NSAttributedString+Extension.swift in Sources */,
