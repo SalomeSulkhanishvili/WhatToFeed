@@ -16,6 +16,7 @@
 		C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */; };
 		C30C9551278601F800F6DCA2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30C9550278601F800F6DCA2 /* Colors.swift */; };
 		C3192556279EAFCC000E3B55 /* DailyMealAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3192555279EAFCC000E3B55 /* DailyMealAddView.swift */; };
+		C319255A279ECBE4000E3B55 /* PullUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3192559279ECBE4000E3B55 /* PullUpView.swift */; };
 		C31FDE9B2786DA6A00E54AB0 /* EmptyFlowTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FDE9A2786DA6A00E54AB0 /* EmptyFlowTemplate.swift */; };
 		C31FDE9D2786DA7D00E54AB0 /* EmptyFlowTemplate.xib in Resources */ = {isa = PBXBuildFile; fileRef = C31FDE9C2786DA7D00E54AB0 /* EmptyFlowTemplate.xib */; };
 		C31FDEA72786DDC400E54AB0 /* Aleo-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C31FDEA12786DDC300E54AB0 /* Aleo-Bold.ttf */; };
@@ -84,6 +85,7 @@
 		C30C954D2786005700F6DCA2 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		C30C9550278601F800F6DCA2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		C3192555279EAFCC000E3B55 /* DailyMealAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealAddView.swift; sourceTree = "<group>"; };
+		C3192559279ECBE4000E3B55 /* PullUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpView.swift; sourceTree = "<group>"; };
 		C31FDE9A2786DA6A00E54AB0 /* EmptyFlowTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFlowTemplate.swift; sourceTree = "<group>"; };
 		C31FDE9C2786DA7D00E54AB0 /* EmptyFlowTemplate.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyFlowTemplate.xib; sourceTree = "<group>"; };
 		C31FDEA12786DDC300E54AB0 /* Aleo-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Aleo-Bold.ttf"; sourceTree = "<group>"; };
@@ -235,6 +237,14 @@
 			path = DailyMealAddView;
 			sourceTree = "<group>";
 		};
+		C3192558279ECBC4000E3B55 /* PullUpView */ = {
+			isa = PBXGroup;
+			children = (
+				C3192559279ECBE4000E3B55 /* PullUpView.swift */,
+			);
+			path = PullUpView;
+			sourceTree = "<group>";
+		};
 		C31FDE9E2786DA8600E54AB0 /* EmptyFlowTemplate */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +279,7 @@
 		C31FDEAD2786E5C200E54AB0 /* Custom Views */ = {
 			isa = PBXGroup;
 			children = (
+				C3192558279ECBC4000E3B55 /* PullUpView */,
 				C3192557279EB730000E3B55 /* DailyMealAddView */,
 				C3D0C684278B472C00601A69 /* Info Label */,
 				C31FDE9E2786DA8600E54AB0 /* EmptyFlowTemplate */,
@@ -575,6 +586,7 @@
 				C3DBB9B22794699E0055A0E3 /* UIFont+Extension.swift in Sources */,
 				C30C954E2786005700F6DCA2 /* UIColor+Extension.swift in Sources */,
 				C3C24B61279749B1008492C3 /* DailyMealMainViewModel.swift in Sources */,
+				C319255A279ECBE4000E3B55 /* PullUpView.swift in Sources */,
 				C3D0C686278B474500601A69 /* InfoLabelView.swift in Sources */,
 				C30C953227858C8900F6DCA2 /* DailyMealMainViewController.swift in Sources */,
 				C30C95442785C98700F6DCA2 /* StatisticsMainViewController.swift in Sources */,

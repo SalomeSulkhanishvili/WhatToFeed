@@ -11,10 +11,16 @@ class DailyMealCategoryCell: UICollectionViewCell {
 
     @IBOutlet private weak var categoryNameLabel: UILabel!
     
+    override var isSelected: Bool {
+        didSet {
+            self.backgroundColor = isSelected ? .lightBlueButtonSelected : .lightBlueButton
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.backgroundColor = .lightBlueActionButton
+        self.backgroundColor = .lightBlueButton
         self.layer.cornerRadius = 10
     }
     

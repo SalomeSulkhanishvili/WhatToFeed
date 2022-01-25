@@ -178,8 +178,17 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
                                                             width: 50 * UIDevice.screenFactor,
                                                             height: dailyMealCollectionView.bounds.height),
                                               options: viewModel?.outputs.dailyMealOptions ?? [])
+        dailyMealOptionsView?.delegate = self
         guard let optionsView = self.dailyMealOptionsView else { return }
         self.contentView.addSubview(optionsView)
+    }
+}
+
+extension DailyMealMainViewController: MealOptionsViewDelegate {
+    func showSettings() {
+        let pullUpView = PullUpView()
+        self.contentView.addSubview(pullUpView)
+        pullUpView.setUpView()
     }
 }
 
