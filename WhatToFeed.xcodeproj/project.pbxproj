@@ -58,6 +58,7 @@
 		C3DF598927A156940021ECB5 /* PullUpCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3DF598727A156940021ECB5 /* PullUpCell.xib */; };
 		C3DF598B27A15BB60021ECB5 /* PullUpTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF598A27A15BB60021ECB5 /* PullUpTableView.swift */; };
 		C3DF598D27A15F320021ECB5 /* PullUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF598C27A15F320021ECB5 /* PullUpViewController.swift */; };
+		C3DF599227A1784C0021ECB5 /* DailyMealCollectionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DF599127A1784C0021ECB5 /* DailyMealCollectionsView.swift */; };
 		C3EF6F2D279AA0A500FE61BD /* MealOptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF6F2C279AA0A500FE61BD /* MealOptionView.swift */; };
 		C3EF6F2F279AD3B100FE61BD /* DailyMealModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3EF6F2E279AD3B100FE61BD /* DailyMealModel.swift */; };
 /* End PBXBuildFile section */
@@ -135,6 +136,7 @@
 		C3DF598727A156940021ECB5 /* PullUpCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PullUpCell.xib; sourceTree = "<group>"; };
 		C3DF598A27A15BB60021ECB5 /* PullUpTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpTableView.swift; sourceTree = "<group>"; };
 		C3DF598C27A15F320021ECB5 /* PullUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PullUpViewController.swift; sourceTree = "<group>"; };
+		C3DF599127A1784C0021ECB5 /* DailyMealCollectionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealCollectionsView.swift; sourceTree = "<group>"; };
 		C3EF6F2C279AA0A500FE61BD /* MealOptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealOptionView.swift; sourceTree = "<group>"; };
 		C3EF6F2E279AD3B100FE61BD /* DailyMealModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMealModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 			children = (
 				C3C24B62279749B8008492C3 /* View Model */,
 				C30C953127858C8900F6DCA2 /* DailyMealMainViewController.swift */,
+				C3DF599127A1784C0021ECB5 /* DailyMealCollectionsView.swift */,
 				C3192554279EAE7C000E3B55 /* Collection View Cells */,
 				C3EF6F30279AD3B600FE61BD /* Model */,
 				C3EF6F2B279AA05E00FE61BD /* MealOptionView */,
@@ -618,6 +621,7 @@
 				C3D0C686278B474500601A69 /* InfoLabelView.swift in Sources */,
 				C30C953227858C8900F6DCA2 /* DailyMealMainViewController.swift in Sources */,
 				C30C95442785C98700F6DCA2 /* StatisticsMainViewController.swift in Sources */,
+				C3DF599227A1784C0021ECB5 /* DailyMealCollectionsView.swift in Sources */,
 				C3D0C67F278A152900601A69 /* DailyMealCell.swift in Sources */,
 				C3EF6F2F279AD3B100FE61BD /* DailyMealModel.swift in Sources */,
 				C31FDEAF278709BC00E54AB0 /* UIView+Extension.swift in Sources */,
