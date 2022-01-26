@@ -186,9 +186,16 @@ extension DailyMealMainViewController: UICollectionViewDataSource, UICollectionV
 
 extension DailyMealMainViewController: MealOptionsViewDelegate {
     func showSettings() {
-        let pullUpView = PullUpView()
-        self.contentView.addSubview(pullUpView)
-        pullUpView.setUpView()
+        let pullupController = PullUpViewController.load(with: PullUpTableView(),
+                                                         height: 150,
+                                                         superViewHeight: contentView.frame.height)
+        self.contentView.addSubview(pullupController.view)
+        self.addChild(pullupController)
+        pullupController.didMove(toParent: self)
+//TODO: remove pull up (for testing purpose)
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
+//            pullupController.closePullUp()
+//        })
     }
 }
 

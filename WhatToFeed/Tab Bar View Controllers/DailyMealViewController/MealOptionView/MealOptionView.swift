@@ -33,7 +33,7 @@ class MealOptionView: UIView {
                                               height: self.bounds.height))
         stackView?.alignment = .fill
         stackView?.axis = .vertical
-        stackView?.distribution = .fillEqually
+        stackView?.distribution = .fill
         stackView?.spacing = 15 * UIDevice.screenFactor
         stackView?.translatesAutoresizingMaskIntoConstraints = false
         guard let stack = stackView else { return }
