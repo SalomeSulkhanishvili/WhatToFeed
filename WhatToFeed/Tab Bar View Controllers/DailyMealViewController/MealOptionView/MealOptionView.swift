@@ -7,13 +7,16 @@
 
 import UIKit
 
+protocol MealOptionsViewDelegate: AnyObject {
+    func showSettings()
+}
+
 class MealOptionView: UIView {
     
     var stackView: UIStackView?
     private var options: [DailyMealOptionItem]
+    var delegate: MealOptionsViewDelegate?
     
-
-
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
     override func draw(_ rect: CGRect) {
@@ -30,7 +33,7 @@ class MealOptionView: UIView {
                                               height: self.bounds.height))
         stackView?.alignment = .fill
         stackView?.axis = .vertical
-        stackView?.distribution = .fillEqually
+        stackView?.distribution = .fill
         stackView?.spacing = 15 * UIDevice.screenFactor
         stackView?.translatesAutoresizingMaskIntoConstraints = false
         guard let stack = stackView else { return }
@@ -58,6 +61,7 @@ class MealOptionView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addShadow(of: .black, radius: 7)
         button.addTarget(self, action: #selector(optionClicked(_:)), for: .touchUpInside)
+        button.tag = item.type.rawValue
         
         NSLayoutConstraint.activate([
             button.heightAnchor.constraint(equalToConstant: sideSize),
@@ -67,7 +71,13 @@ class MealOptionView: UIView {
     }
     
     @objc func optionClicked(_ sender: UIButton) {
-        // clicked
+        self.stackView?.arrangedSubviews.forEach({ $0.backgroundColor = .white })
+        sender.backgroundColor = UIColor(hexValue: 0x90D7FF)
+        // do some action here
+        let itemType = MealOption(rawValue: sender.tag)
+        if itemType == .settings {
+            delegate?.showSettings()
+        }
     }
     
     deinit {
@@ -76,16 +86,16 @@ class MealOptionView: UIView {
     
 }
 
-
+enum MealOption: Int {
+    case done = 1
+    case start
+    case description
+    case share
+    case settings
+}
 
 struct DailyMealOptionItem {
-    enum MealOption: String {
-        case done = "done"
-        case start = "start"
-        case description = "description"
-        case share = "share"
-        case settings = "settings"
-    }
+    
     var type: MealOption
     
     init(of type: MealOption) {
@@ -93,7 +103,12 @@ struct DailyMealOptionItem {
     }
     
     var name: String {
-        return type.rawValue
+        let names: [MealOption: String] = [.done : "done",
+                                         .start : "start",
+                                         .description: "description",
+                                         .share : "share",
+                                         .settings : "settings"]
+        return names[type] ?? "none"
     }
     var imageName: String {
         return name + "MealOption_icon"
