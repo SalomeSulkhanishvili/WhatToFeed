@@ -11,7 +11,9 @@ protocol DailyMealCollectionsViewDelegate {
     func showPullUp()
     func removePullUp()
     func optionsView(isVisible: Bool)
+    func didClickedOn(on option: MealOption)
 }
+
 class DailyMealCollectionsView: UIView {
 
     private lazy var dailyMealCollectionView: UICollectionView = { loadDailyMealCollectionView() }()
@@ -247,12 +249,7 @@ extension DailyMealCollectionsView {
 }
 
 extension DailyMealCollectionsView: MealOptionsViewDelegate {
-    func showSettings() {
-        delegate?.showPullUp()
-        
-        // MARK: - for testing purpose (should remove)
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-            self.delegate?.removePullUp()
-        })
+    func didClickedOn(on option: MealOption) {
+        delegate?.didClickedOn(on: option)
     }
 }

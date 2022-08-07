@@ -25,7 +25,7 @@ class PullUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .orange
+        self.view.backgroundColor = .white
         self.view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         self.view.layer.cornerRadius = 30
         self.view.layer.masksToBounds = true

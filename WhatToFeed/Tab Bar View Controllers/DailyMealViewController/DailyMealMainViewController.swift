@@ -74,7 +74,7 @@ extension DailyMealMainViewController {
     
     private func loadPullUp() {
         pullUpView = PullUpViewController.load(with: PullUpTableView(),
-                                                         height: 150,
+                                                         height: 100,
                                                          superViewHeight: self.contentView.frame.height)
         guard let pullUp = pullUpView else { return }
         self.contentView.addSubview(pullUp.view)
@@ -94,10 +94,26 @@ extension DailyMealMainViewController: DailyMealCollectionsViewDelegate {
     }
     
     func optionsView(isVisible: Bool) {
-        if isVisible {
-            self.contentView.highlight(for: self.collectionsView, color: .backgroundForHighlight)
-        } else {
-            self.contentView.removeLayer(of: .highlighter)
+        contentView.highlight(for: collectionsView, isVisible: isVisible)
+        if pullUpView != nil {
+            removePullUp()
+        }
+    }
+    
+    func didClickedOn(on option: MealOption) {
+        if pullUpView != nil { pullUpView?.closePullUp() }
+        
+        switch option {
+        case .done:
+            print("clicked Done")
+        case .start:
+            print("Clicked Start")
+        case .description:
+            print("Clicked description")
+        case .share:
+            print("Clicked Share")
+        case .settings:
+            loadPullUp()
         }
     }
 }

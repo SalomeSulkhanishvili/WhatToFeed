@@ -10,7 +10,7 @@ import UIKit
 
 // MARK: - load UIView
 extension UIView {
-    static func _load<T>(with name: String, for owner: Any? = self, options: [UINib.OptionsKey : Any]? = nil) -> T {
+    static func _load<T>(with name: String, for owner: Any? = UIView.self, options: [UINib.OptionsKey : Any]? = nil) -> T {
         guard let view = Bundle.main.loadNibNamed(name, owner: owner, options: options)?.first as? T else {
             fatalError("Nib can not be loaded with given parameters")
         }
@@ -95,6 +95,14 @@ extension UIView {
 }
 
 extension UIView {
+    func highlight(for view: UIView, isVisible: Bool) {
+        if isVisible {
+            self.highlight(for: view, color: .backgroundForHighlight)
+        } else {
+            self.removeLayer(of: .highlighter)
+        }
+    }
+    
     func highlight(for view: UIView, color: UIColor = .black) {
         self.highlight(x: view.frame.origin.x,
                        y: view.frame.origin.y,
@@ -121,7 +129,6 @@ extension UIView {
         fillLayer.fillColor = color.cgColor// view.backgroundColor?.cgColor
         fillLayer.name = LayersName.highlighter.rawValue
         layer.addSublayer(fillLayer)
-        
     }
 }
 

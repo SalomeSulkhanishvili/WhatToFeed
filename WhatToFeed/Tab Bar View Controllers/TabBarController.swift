@@ -24,6 +24,7 @@ class TabBarController: UITabBarController {
         self.selectedIndex = 0
         self.tabBar.backgroundColor = .tabBarLightGray
         self.tabBar.layer.cornerRadius = 15
+        self.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
     }
     
     private func setUpTabBarControllers() {

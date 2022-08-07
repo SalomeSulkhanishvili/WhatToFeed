@@ -440,8 +440,8 @@
 		C3DF598E27A170900021ECB5 /* PullUpTableView */ = {
 			isa = PBXGroup;
 			children = (
-				C3DF598A27A15BB60021ECB5 /* PullUpTableView.swift */,
 				C3DF598527A156730021ECB5 /* PullUpTableViewCell */,
+				C3DF598A27A15BB60021ECB5 /* PullUpTableView.swift */,
 			);
 			path = PullUpTableView;
 			sourceTree = "<group>";

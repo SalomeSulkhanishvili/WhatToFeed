@@ -8,7 +8,7 @@
 import UIKit
 
 protocol MealOptionsViewDelegate: AnyObject {
-    func showSettings()
+    func didClickedOn(on option: MealOption)
 }
 
 class MealOptionView: UIView {
@@ -72,12 +72,9 @@ class MealOptionView: UIView {
     
     @objc func optionClicked(_ sender: UIButton) {
         self.stackView?.arrangedSubviews.forEach({ $0.backgroundColor = .white })
-        sender.backgroundColor = UIColor(hexValue: 0x90D7FF)
-        // do some action here
-        let itemType = MealOption(rawValue: sender.tag)
-        if itemType == .settings {
-            delegate?.showSettings()
-        }
+        sender.backgroundColor = UIColor(hexValue: 0x90D7FF) // TODO: move colors in one file
+        guard let itemType = MealOption(rawValue: sender.tag) else { return print("incorrect option") }
+        delegate?.didClickedOn(on: itemType)
     }
     
     deinit {

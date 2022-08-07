@@ -14,7 +14,7 @@ class PullUpTableView: UITableViewController {
         
         self.tableView.showsVerticalScrollIndicator = false
         self.tableView.registerCell(withType: PullUpCell.self)
-        self.tableView.backgroundColor = .white
+        self.tableView.backgroundColor = .white    
         
 
         // Uncomment the following line to preserve selection between presentations
